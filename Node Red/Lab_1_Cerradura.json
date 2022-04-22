@@ -1,15 +1,15 @@
 [
    {
-      "id":"f7ff6536.244cc8",
+      "id":"fa10062b.bcdec8",
       "type":"tab",
-      "label":"Laboratorio de Sistemas Digitales",
+      "label":"Laboratorio de Diseño Logico",
       "disabled":false,
       "info":""
    },
    {
-      "id":"eebdab2.549f258",
+      "id":"cfbb8d54.92b8d",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decicion de Temperatura",
       "property":"payload",
       "propertyType":"msg",
@@ -32,17 +32,17 @@
       "y":1380,
       "wires":[
          [
-            "d5366c2f.92e89"
+            "2c33e2ba.dc84ae"
          ],
          [
-            "cc69d86b.2dcce8"
+            "be8c0b16.90a908"
          ]
       ]
    },
    {
-      "id":"cc69d86b.2dcce8",
+      "id":"be8c0b16.90a908",
       "type":"change",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Temperatura alta",
       "rules":[
          {
@@ -62,16 +62,16 @@
       "y":1440,
       "wires":[
          [
-            "b96b6c73.f006e",
-            "a8295a2d.1bef68",
-            "da014ec9.d1161"
+            "8dc23912.7075c8",
+            "55a0d047.bd235",
+            "315ee252.08b36e"
          ]
       ]
    },
    {
-      "id":"d5366c2f.92e89",
+      "id":"2c33e2ba.dc84ae",
       "type":"change",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Temperatura adecuada",
       "rules":[
          {
@@ -91,19 +91,19 @@
       "y":1180,
       "wires":[
          [
-            "bd383806.af72d8",
-            "779e520.7ecafb",
-            "eea3bb9d.c399f8",
-            "aa7dc412.4da5f8",
-            "e606f3b1.3c18d",
-            "c43f5dba.eb144"
+            "5a171f.b2f318e",
+            "96b03e2f.1f4f4",
+            "6a29fd6f.c03684",
+            "9e3bd2b7.ea8b1",
+            "22d31b89.576334",
+            "8c49737e.fe77a"
          ]
       ]
    },
    {
-      "id":"25111679.784c2a",
+      "id":"b7c1a44b.4447b8",
       "type":"json",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "property":"payload",
       "action":"",
@@ -112,16 +112,16 @@
       "y":1360,
       "wires":[
          [
-            "2eddba24.1e2af6",
-            "2f3178f8.bc4038"
+            "5a4df790.2d4e18",
+            "212df327.250c9c"
          ]
       ]
    },
    {
-      "id":"879092ef.e790b",
+      "id":"b26b6e53.805f7",
       "type":"ui_text",
-      "z":"f7ff6536.244cc8",
-      "group":"92cab881.5485c8",
+      "z":"fa10062b.bcdec8",
+      "group":"3d1dda04.d53f36",
       "order":5,
       "width":0,
       "height":0,
@@ -136,11 +136,11 @@
       ]
    },
    {
-      "id":"aa7dc412.4da5f8",
+      "id":"9e3bd2b7.ea8b1",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"nombre",
-      "func":"let array = global.get(\"alumnoGlobal0\");\nmsg.payload = array.nombre\nreturn msg;",
+      "func":"let array = global.get(\"alumnoGlobal1\");\nmsg.payload = array.nombre\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -152,15 +152,15 @@
       "y":1100,
       "wires":[
          [
-            "879092ef.e790b"
+            "b26b6e53.805f7"
          ]
       ]
    },
    {
-      "id":"8a077150.4a5b6",
+      "id":"43877154.7867f",
       "type":"ui_text",
-      "z":"f7ff6536.244cc8",
-      "group":"92cab881.5485c8",
+      "z":"fa10062b.bcdec8",
+      "group":"3d1dda04.d53f36",
       "order":1,
       "width":0,
       "height":0,
@@ -175,11 +175,11 @@
       ]
    },
    {
-      "id":"eea3bb9d.c399f8",
+      "id":"6a29fd6f.c03684",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"matricula",
-      "func":"let array = global.get(\"alumnoGlobal0\");\nmsg.payload = array.matricula\nreturn msg;",
+      "func":"let array = global.get(\"alumnoGlobal1\");\nmsg.payload = array.matricula\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -191,16 +191,16 @@
       "y":1140,
       "wires":[
          [
-            "8a077150.4a5b6"
+            "43877154.7867f"
          ]
       ]
    },
    {
-      "id":"83eb5d93.3659c",
+      "id":"540f9cfb.edf874",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Variable global de aforo",
-      "func":"let GlobalAforo = 0 ;\nglobal.set(\"AforoGlobal0\",GlobalAforo);\n\nmsg.payload = global.get(\"AforoGlobal0\");\nreturn msg;\n\n",
+      "func":"let GlobalAforo = 0 ;\nglobal.set(\"AforoGlobal1\",GlobalAforo);\n\nmsg.payload = global.get(\"AforoGlobal1\");\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -212,16 +212,16 @@
       "y":940,
       "wires":[
          [
-            "b51dea6.6c70718",
-            "ca838e96.ee4a8"
+            "d5e51dd7.b0e16",
+            "72356403.cdf78c"
          ]
       ]
    },
    {
-      "id":"b51dea6.6c70718",
+      "id":"d5e51dd7.b0e16",
       "type":"ui_text",
-      "z":"f7ff6536.244cc8",
-      "group":"829fea5b.a88bf8",
+      "z":"fa10062b.bcdec8",
+      "group":"2c8bf412.27520c",
       "order":2,
       "width":0,
       "height":0,
@@ -236,11 +236,11 @@
       ]
    },
    {
-      "id":"779e520.7ecafb",
+      "id":"96b03e2f.1f4f4",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"ubicacion",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nmsg.payload = ubi;\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nmsg.payload = ubi;\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -252,15 +252,15 @@
       "y":1180,
       "wires":[
          [
-            "c252299d.31d638"
+            "1aad84b4.d65ffb"
          ]
       ]
    },
    {
-      "id":"c252299d.31d638",
+      "id":"1aad84b4.d65ffb",
       "type":"ui_text",
-      "z":"f7ff6536.244cc8",
-      "group":"92cab881.5485c8",
+      "z":"fa10062b.bcdec8",
+      "group":"3d1dda04.d53f36",
       "order":2,
       "width":0,
       "height":0,
@@ -275,13 +275,13 @@
       ]
    },
    {
-      "id":"abde14de.3f97d8",
+      "id":"ac52d040.f206d",
       "type":"ui_slider",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo permitido slide",
       "label":"Aforo permitido ",
       "tooltip":"",
-      "group":"829fea5b.a88bf8",
+      "group":"2c8bf412.27520c",
       "order":4,
       "width":0,
       "height":0,
@@ -296,15 +296,15 @@
       "y":160,
       "wires":[
          [
-            "9524bc2c.0ba74"
+            "19bd2047.88b9"
          ]
       ]
    },
    {
-      "id":"2b2a8e86.21e3c2",
+      "id":"96bed640.ecf4e8",
       "type":"ui_text",
-      "z":"f7ff6536.244cc8",
-      "group":"829fea5b.a88bf8",
+      "z":"fa10062b.bcdec8",
+      "group":"2c8bf412.27520c",
       "order":3,
       "width":0,
       "height":0,
@@ -319,11 +319,11 @@
       ]
    },
    {
-      "id":"9524bc2c.0ba74",
+      "id":"19bd2047.88b9",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Variable global de aforo",
-      "func":"let GlobalAforoPermitido = msg.payload ;\nglobal.set(\"AforoPermitidoGlobal0\",GlobalAforoPermitido);\n\nmsg.payload = global.get(\"AforoPermitidoGlobal0\");\nreturn msg;\n\n",
+      "func":"let GlobalAforoPermitido = msg.payload ;\nglobal.set(\"AforoPermitidoGlobal1\",GlobalAforoPermitido);\n\nmsg.payload = global.get(\"AforoPermitidoGlobal1\");\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -335,18 +335,18 @@
       "y":160,
       "wires":[
          [
-            "2b2a8e86.21e3c2",
-            "a8827ec5.f7d78",
-            "1f77390f.297457"
+            "96bed640.ecf4e8",
+            "6adec311.86257c",
+            "114dd64a.4f5d1a"
          ]
       ]
    },
    {
-      "id":"bd383806.af72d8",
+      "id":"5a171f.b2f318e",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo +1",
-      "func":"let aforo = global.get(\"AforoGlobal0\");\naforo += 1 ;\n\nglobal.set(\"AforoGlobal0\",aforo);\n\nmsg.payload = aforo ;\nreturn msg;\n\n",
+      "func":"let aforo = global.get(\"AforoGlobal1\");\naforo += 1 ;\n\nglobal.set(\"AforoGlobal1\",aforo);\n\nmsg.payload = aforo ;\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -358,17 +358,17 @@
       "y":860,
       "wires":[
          [
-            "b51dea6.6c70718",
-            "ca838e96.ee4a8"
+            "d5e51dd7.b0e16",
+            "72356403.cdf78c"
          ]
       ]
    },
    {
-      "id":"f3fd67b7.cff208",
+      "id":"b900e25.e2db02",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/AforoLleno/0",
+      "topic":"Gabanni/UAMazc/AforoLleno/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -384,9 +384,9 @@
       ]
    },
    {
-      "id":"a7398dd4.52b0e",
+      "id":"b99eb964.efacb8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo lleno",
       "func":"\nmsg.payload = \"{\\\"Mensaje\\\":\\\" Aforo lleno \\\"}\" ;\nreturn msg;",
       "outputs":1,
@@ -400,16 +400,16 @@
       "y":1440,
       "wires":[
          [
-            "f3fd67b7.cff208"
+            "b900e25.e2db02"
          ]
       ]
    },
    {
-      "id":"2f3178f8.bc4038",
+      "id":"212df327.250c9c",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Variable global de Usuario",
-      "func":"let alumno = msg.payload ;\nglobal.set(\"alumnoGlobal0\",alumno);\n\nmsg.payload = global.get(\"alumnoGlobal0\");\nreturn msg;\n\n",
+      "func":"let alumno = msg.payload ;\nglobal.set(\"alumnoGlobal1\",alumno);\n\nmsg.payload = global.get(\"alumnoGlobal1\");\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -426,21 +426,21 @@
       ]
    },
    {
-      "id":"104a5931.7585d7",
+      "id":"bca38448.646128",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decicion apertura aforo",
       "property":"payload",
       "propertyType":"msg",
       "rules":[
          {
             "t":"lte",
-            "v":"AforoPermitidoGlobal0",
+            "v":"AforoPermitidoGlobal1",
             "vt":"global"
          },
          {
             "t":"gt",
-            "v":"AforoPermitidoGlobal0",
+            "v":"AforoPermitidoGlobal1",
             "vt":"global"
          }
       ],
@@ -451,19 +451,19 @@
       "y":1420,
       "wires":[
          [
-            "1364d3e6.c1c82c"
+            "a18a94a1.1eacf8"
          ],
          [
-            "a7398dd4.52b0e"
+            "b99eb964.efacb8"
          ]
       ]
    },
    {
-      "id":"2eddba24.1e2af6",
+      "id":"5a4df790.2d4e18",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo",
-      "func":"let aforo = global.get(\"AforoGlobal0\");\naforo += 1 ;\nmsg.payload = aforo ;\nreturn msg;\n\n",
+      "func":"let aforo = global.get(\"AforoGlobal1\");\naforo += 1 ;\nmsg.payload = aforo ;\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -475,16 +475,16 @@
       "y":1420,
       "wires":[
          [
-            "104a5931.7585d7"
+            "bca38448.646128"
          ]
       ]
    },
    {
-      "id":"e606f3b1.3c18d",
+      "id":"22d31b89.576334",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"temperatura",
-      "func":"let array = global.get(\"alumnoGlobal0\");\nlet temperatura =  array.temperatura;\nmsg.payload = temperatura;\nreturn msg;",
+      "func":"let array = global.get(\"alumnoGlobal1\");\nlet temperatura =  array.temperatura;\nmsg.payload = temperatura;\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -496,17 +496,17 @@
       "y":1240,
       "wires":[
          [
-            "7ac992.434dd67",
-            "e1f4fc0f.2f752"
+            "77edf61f.6e5eb8",
+            "860701a6.ed866"
          ]
       ]
    },
    {
-      "id":"7ac992.434dd67",
+      "id":"77edf61f.6e5eb8",
       "type":"ui_gauge",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "group":"92cab881.5485c8",
+      "group":"3d1dda04.d53f36",
       "order":10,
       "width":0,
       "height":0,
@@ -530,11 +530,11 @@
       ]
    },
    {
-      "id":"e1f4fc0f.2f752",
+      "id":"860701a6.ed866",
       "type":"ui_chart",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Temperaturas de usuarios",
-      "group":"92cab881.5485c8",
+      "group":"3d1dda04.d53f36",
       "order":11,
       "width":0,
       "height":0,
@@ -575,11 +575,11 @@
       ]
    },
    {
-      "id":"1364d3e6.c1c82c",
+      "id":"a18a94a1.1eacf8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo disponible",
-      "func":"let array = global.get(\"alumnoGlobal0\");\nlet temperatura =  array.temperatura;\nmsg.payload = temperatura;\nreturn msg;",
+      "func":"let array = global.get(\"alumnoGlobal1\");\nlet temperatura =  array.temperatura;\nmsg.payload = temperatura;\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -591,16 +591,16 @@
       "y":1380,
       "wires":[
          [
-            "eebdab2.549f258"
+            "cfbb8d54.92b8d"
          ]
       ]
    },
    {
-      "id":"93db46c3.024578",
+      "id":"a4b7b306.cfb42",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/TemperaturaAlta/0",
+      "topic":"Gabanni/UAMazc/TemperaturaAlta/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -616,9 +616,9 @@
       ]
    },
    {
-      "id":"b96b6c73.f006e",
+      "id":"8dc23912.7075c8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aviso de temperatura alta",
       "func":"msg.payload = \"{\\\"Mensaje\\\":\\\" Temperatura Alta \\\"}\" ;\nreturn msg;",
       "outputs":1,
@@ -632,14 +632,14 @@
       "y":1440,
       "wires":[
          [
-            "93db46c3.024578"
+            "a4b7b306.cfb42"
          ]
       ]
    },
    {
-      "id":"44d1cadd.7f1864",
+      "id":"ce8a53d0.31103",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar BD Entrada",
       "info":"Insertar en la BD de datos",
       "x":3050,
@@ -649,11 +649,11 @@
       ]
    },
    {
-      "id":"1d9335c1.36480a",
+      "id":"4b390211.9759ac",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar en Entrada",
-      "func":"let alumno  = msg.payload;\nlet RFID = alumno[0].RFID ;\nlet matricula = alumno[0].matricula;\nlet nombre = alumno[0].nombre;\nlet apellidos = alumno[0].apellidos ;\n\nlet array = global.get(\"alumnoGlobal0\");\nlet temp = array.temperatura;\n\nlet area = global.get(\"UbicacionGlobal0\");\n\nmsg.topic = \"INSERT INTO registroentradaalumnos (RFID, matricula, nombre, apellidos, temperatura, area) VALUES ('\"+ RFID +\"','\"+ matricula +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;",
+      "func":"let alumno  = msg.payload;\nlet RFID = alumno[0].RFID ;\nlet matricula = alumno[0].matricula;\nlet nombre = alumno[0].nombre;\nlet apellidos = alumno[0].apellidos ;\n\nlet array = global.get(\"alumnoGlobal1\");\nlet temp = array.temperatura;\n\nlet area = global.get(\"UbicacionGlobal1\");\n\nmsg.topic = \"INSERT INTO registroentradaalumnos (RFID, matricula, nombre, apellidos, temperatura, area) VALUES ('\"+ RFID +\"','\"+ matricula +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -665,14 +665,14 @@
       "y":1320,
       "wires":[
          [
-            "d7c1031d.2fe04"
+            "a99f3258.aea36"
          ]
       ]
    },
    {
-      "id":"d7c1031d.2fe04",
+      "id":"a99f3258.aea36",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":2860,
@@ -684,11 +684,11 @@
       ]
    },
    {
-      "id":"a8827ec5.f7d78",
+      "id":"6adec311.86257c",
       "type":"ui_chart",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "group":"829fea5b.a88bf8",
+      "group":"2c8bf412.27520c",
       "order":5,
       "width":0,
       "height":0,
@@ -729,11 +729,11 @@
       ]
    },
    {
-      "id":"f9864e2.a6b4fb",
+      "id":"67731748.fd9c58",
       "type":"ui_button",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "group":"829fea5b.a88bf8",
+      "group":"2c8bf412.27520c",
       "order":11,
       "width":"0",
       "height":"0",
@@ -751,16 +751,16 @@
       "y":940,
       "wires":[
          [
-            "83eb5d93.3659c"
+            "540f9cfb.edf874"
          ]
       ]
    },
    {
-      "id":"8c91767d.c2cdb8",
+      "id":"b14500e.67f0e",
       "type":"mqtt in",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/compararRFID/Alumno/0",
+      "topic":"Gabanni/UAMazc/compararRFID/Alumno/1",
       "qos":"2",
       "datatype":"auto",
       "broker":"9024296.b4fb6d8",
@@ -770,16 +770,16 @@
       "y":380,
       "wires":[
          [
-            "237b4f06.998fb"
+            "a929634a.0feb2"
          ]
       ]
    },
    {
-      "id":"b579db08.d72a18",
+      "id":"cbc1a34f.81e2d",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"busqueda alumno",
-      "func":"let RFID = global.get(\"RFIDGlobal0\");\nmsg.topic = \"SELECT * FROM alumnos where RFID = '\" + RFID + \"'\";\nreturn msg;",
+      "func":"let RFID = global.get(\"RFIDGlobal1\");\nmsg.topic = \"SELECT * FROM alumnos where RFID = '\" + RFID + \"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -791,30 +791,30 @@
       "y":560,
       "wires":[
          [
-            "f7471f9d.68154"
+            "69303154.62146"
          ]
       ]
    },
    {
-      "id":"f7471f9d.68154",
+      "id":"69303154.62146",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":220,
       "y":620,
       "wires":[
          [
-            "68a7d455.c9bbec"
+            "f4c7aaac.780bf8"
          ]
       ]
    },
    {
-      "id":"68a7d455.c9bbec",
+      "id":"f4c7aaac.780bf8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"resultado alumno",
-      "func":"let array = msg.payload;\nif (array.length > 0 ){\n    let alumno = array[0]; \n    global.set(\"alumnoEctGlobal0\",alumno);\n    msg.payload = global.get(\"alumnoEctGlobal0\");\n    return msg;\n}else {\n    msg.payload = \"No encontrado\";\n    return msg;\n}\n",
+      "func":"let array = msg.payload;\nif (array.length > 0 ){\n    let alumno = array[0]; \n    global.set(\"alumnoEctGlobal1\",alumno);\n    msg.payload = global.get(\"alumnoEctGlobal1\");\n    return msg;\n}else {\n    msg.payload = \"No encontrado\";\n    return msg;\n}\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -826,14 +826,14 @@
       "y":620,
       "wires":[
          [
-            "3741aacd.e375a6"
+            "bbef1b4a.4a2588"
          ]
       ]
    },
    {
-      "id":"6287e9fb.6c53c8",
+      "id":"49d6a5a8.f90a7c",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Comprobar password RFID en BD Alumnos",
       "info":"Esta fucnion recibe el numero de identificacion RFID\ndel alumno que desea ingresar, en caso de que la encunetre nos da la informacion del alumno, en caso contrario nos devuelve un \"No encontrado\"",
       "x":250,
@@ -843,11 +843,11 @@
       ]
    },
    {
-      "id":"334b3073.a2c67",
+      "id":"573abbd5.0099d4",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/SinAcceso/0",
+      "topic":"Gabanni/UAMazc/SinAcceso/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -863,9 +863,9 @@
       ]
    },
    {
-      "id":"3741aacd.e375a6",
+      "id":"bbef1b4a.4a2588",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decision ",
       "property":"payload",
       "propertyType":"msg",
@@ -888,17 +888,17 @@
       "y":720,
       "wires":[
          [
-            "865d96e8.4e8308"
+            "9a62b8d1.e88728"
          ],
          [
-            "a47e1341.4499d"
+            "72c0a33c.b82b1c"
          ]
       ]
    },
    {
-      "id":"a47e1341.4499d",
+      "id":"72c0a33c.b82b1c",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"No encontrado",
       "func":"\nmsg.payload = \"{\\\"Mensaje\\\":\\\" No encontrado \\\"}\" ;\nreturn msg;",
       "outputs":1,
@@ -912,16 +912,16 @@
       "y":760,
       "wires":[
          [
-            "334b3073.a2c67"
+            "573abbd5.0099d4"
          ]
       ]
    },
    {
-      "id":"f434acce.22853",
+      "id":"f3de4875.ef4ac8",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/LecturaTemperatura/Alumno/0",
+      "topic":"Gabanni/UAMazc/LecturaTemperatura/Alumno/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -937,11 +937,11 @@
       ]
    },
    {
-      "id":"18330a4.91cb2f6",
+      "id":"17dfd01.c52ff3",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"TMP adecuada",
-      "func":"let array = global.get(\"alumnoEctGlobal0\");\nlet nombre = array.nombre;\nlet matricula = array.matricula;\nmsg.payload = \"{\\\"nombre\\\":\\\" \"+ nombre + \" \\\",\\\"id\\\":\\\"\"+ matricula + \"\\\"}\" ;\nreturn msg;",
+      "func":"let array = global.get(\"alumnoEctGlobal1\");\nlet nombre = array.nombre;\nlet matricula = array.matricula;\nmsg.payload = \"{\\\"nombre\\\":\\\" \"+ nombre + \" \\\",\\\"id\\\":\\\"\"+ matricula + \"\\\"}\" ;\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -953,16 +953,16 @@
       "y":680,
       "wires":[
          [
-            "f434acce.22853"
+            "f3de4875.ef4ac8"
          ]
       ]
    },
    {
-      "id":"865d96e8.4e8308",
+      "id":"9a62b8d1.e88728",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Encontrado",
-      "func":"//let ubi = global.get(\"UbicacionGlobal0\");\n//msg.topic = \"SELECT * FROM registroentradaalumnos where RFID = '\"+ msg.payload.RFID +\"' AND area = '\" + ubi + \"'\";\n\nmsg.topic = \"SELECT * FROM registroentradaalumnos where RFID = '\"+ msg.payload.RFID +\"'\";\nreturn msg;",
+      "func":"msg.topic = \"SELECT * FROM registroentradaalumnos where RFID = '\"+ msg.payload.RFID +\"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -974,14 +974,14 @@
       "y":700,
       "wires":[
          [
-            "876b0198.5bbc2"
+            "55b2e7d3.1a9178"
          ]
       ]
    },
    {
-      "id":"cac7229a.68c7",
+      "id":"26e8237c.c76ddc",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decision ",
       "property":"payload",
       "propertyType":"msg",
@@ -1004,37 +1004,37 @@
       "y":700,
       "wires":[
          [
-            "395724c7.79ebec",
-            "b09d0f76.c7b17",
-            "7821c5ce.461b5c",
-            "7f78be95.4a3ca",
-            "e39fc6ae.8ae5c8"
+            "dc7c5068.009a",
+            "1a4310e4.803bdf",
+            "77b88ff6.197b6",
+            "34798daa.afeb52",
+            "94843b24.c44ae8"
          ],
          [
-            "362ba2cf.8123fe"
+            "9f9e73cd.cf2fe"
          ]
       ]
    },
    {
-      "id":"876b0198.5bbc2",
+      "id":"55b2e7d3.1a9178",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":580,
       "y":700,
       "wires":[
          [
-            "aa724fd0.12221"
+            "2c86ecc0.8b9c64"
          ]
       ]
    },
    {
-      "id":"aa724fd0.12221",
+      "id":"2c86ecc0.8b9c64",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"busqueda alumno (registroentradaalumnos)",
-      "func":"let array = msg.payload;\nif (array.length > 0 ){\n    let alumno = array[0]; \n    global.set(\"alumnoGlobal0\",alumno);\n    msg.payload = global.get(\"alumnoGlobal0\");\n    return msg;\n}else {\n    msg.payload = \"No encontrado\"; \n    return msg;\n}\n",
+      "func":"let array = msg.payload;\nif (array.length > 0 ){\n    let alumno = array[0]; \n    global.set(\"alumnoGlobal1\",alumno);\n    msg.payload = global.get(\"alumnoGlobal1\");\n    return msg;\n}else {\n    msg.payload = \"No encontrado\"; \n    return msg;\n}\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -1046,16 +1046,16 @@
       "y":700,
       "wires":[
          [
-            "cac7229a.68c7"
+            "26e8237c.c76ddc"
          ]
       ]
    },
    {
-      "id":"b31ab73c.54c4c8",
+      "id":"1f8ae6ce.5e1779",
       "type":"mqtt in",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/InfoTemperatura/Alumno/0",
+      "topic":"Gabanni/UAMazc/InfoTemperatura/Alumno/1",
       "qos":"2",
       "datatype":"auto",
       "broker":"9024296.b4fb6d8",
@@ -1065,16 +1065,16 @@
       "y":1300,
       "wires":[
          [
-            "25111679.784c2a"
+            "b7c1a44b.4447b8"
          ]
       ]
    },
    {
-      "id":"c43f5dba.eb144",
+      "id":"8c49737e.fe77a",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Obtengo informacion del alumno",
-      "func":"let array = global.get(\"alumnoGlobal0\");\nlet matricula = array.matricula\nmsg.topic = \"SELECT * FROM alumnos where matricula = '\" + matricula + \"'\";\nreturn msg;",
+      "func":"let array = global.get(\"alumnoGlobal1\");\nlet matricula = array.matricula\nmsg.topic = \"SELECT * FROM alumnos where matricula = '\" + matricula + \"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -1086,29 +1086,29 @@
       "y":1320,
       "wires":[
          [
-            "9e31f5d2.8a17e8"
+            "63dbdfe0.cc2b4"
          ]
       ]
    },
    {
-      "id":"9e31f5d2.8a17e8",
+      "id":"63dbdfe0.cc2b4",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":2480,
       "y":1320,
       "wires":[
          [
-            "1d9335c1.36480a",
-            "a4f60045.f8c42"
+            "4b390211.9759ac",
+            "9a3bbf89.6665c"
          ]
       ]
    },
    {
-      "id":"395724c7.79ebec",
+      "id":"dc7c5068.009a",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar en Salida",
       "func":"let RFID = msg.payload.RFID;\nlet matricula = msg.payload.matricula;\nlet nombre = msg.payload.nombre;\nlet apellidos = msg.payload.apellidos;\nlet area = msg.payload.area;\n\n\nmsg.topic = \"INSERT INTO registrosalidaalumnos (RFID, matricula, nombre, apellidos,  area) VALUES ('\"+ RFID +\"','\"+ matricula +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ area +\"')\";\nreturn msg;",
       "outputs":1,
@@ -1122,14 +1122,14 @@
       "y":480,
       "wires":[
          [
-            "32f6092b.ee20f6"
+            "b7f24a10.f34298"
          ]
       ]
    },
    {
-      "id":"32f6092b.ee20f6",
+      "id":"b7f24a10.f34298",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":1600,
@@ -1141,9 +1141,9 @@
       ]
    },
    {
-      "id":"b09d0f76.c7b17",
+      "id":"1a4310e4.803bdf",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Eliminar de Entrada",
       "func":"let RFID = msg.payload.RFID;\nmsg.topic = \"DELETE FROM registroentradaalumnos where RFID = '\"+ RFID +\"'\";\nreturn msg;\n",
       "outputs":1,
@@ -1157,16 +1157,16 @@
       "y":520,
       "wires":[
          [
-            "32f6092b.ee20f6"
+            "b7f24a10.f34298"
          ]
       ]
    },
    {
-      "id":"2e639b58.e35494",
+      "id":"97334075.6d657",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/Despedida/0",
+      "topic":"Gabanni/UAMazc/Despedida/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -1182,9 +1182,9 @@
       ]
    },
    {
-      "id":"7821c5ce.461b5c",
+      "id":"77b88ff6.197b6",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Alumno saliendo",
       "func":"let nombre = msg.payload.nombre;\nmsg.payload = \"{\\\"nombre\\\":\\\" \"+ nombre + \" \\\"}\" ;\nreturn msg;",
       "outputs":1,
@@ -1198,16 +1198,16 @@
       "y":560,
       "wires":[
          [
-            "2e639b58.e35494"
+            "97334075.6d657"
          ]
       ]
    },
    {
-      "id":"7f78be95.4a3ca",
+      "id":"34798daa.afeb52",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo -1",
-      "func":"let aforo = global.get(\"AforoGlobal0\");\naforo -= 1 ;\n\nglobal.set(\"AforoGlobal0\",aforo);\n\nmsg.payload = aforo ;\nreturn msg;\n\n",
+      "func":"let aforo = global.get(\"AforoGlobal1\");\naforo -= 1 ;\n\nglobal.set(\"AforoGlobal1\",aforo);\n\nmsg.payload = aforo ;\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -1219,17 +1219,17 @@
       "y":800,
       "wires":[
          [
-            "b51dea6.6c70718",
-            "ca838e96.ee4a8"
+            "d5e51dd7.b0e16",
+            "72356403.cdf78c"
          ]
       ]
    },
    {
-      "id":"c8fe28f1.c02f48",
+      "id":"b93b95f6.3c30e8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Registro",
-      "func":"let alumno  = msg.payload;\nlet RFID = alumno[0].RFID ;\nlet matricula = alumno[0].matricula;\nlet nombre = alumno[0].nombre;\nlet apellidos = alumno[0].apellidos ;\n\nlet array = global.get(\"alumnoGlobal0\");\nlet temp = array.temperatura;\n\nlet area = global.get(\"UbicacionGlobal0\");\n\nmsg.topic = \"INSERT INTO temperaturaaltaalumnos (RFID, matricula, nombre, apellidos, temperatura, area) VALUES ('\"+ RFID +\"','\"+ matricula +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;",
+      "func":"let alumno  = msg.payload;\nlet RFID = alumno[0].RFID ;\nlet matricula = alumno[0].matricula;\nlet nombre = alumno[0].nombre;\nlet apellidos = alumno[0].apellidos ;\n\nlet array = global.get(\"alumnoGlobal1\");\nlet temp = array.temperatura;\n\nlet area = global.get(\"UbicacionGlobal1\");\n\nmsg.topic = \"INSERT INTO temperaturaaltaalumnos (RFID, matricula, nombre, apellidos, temperatura, area) VALUES ('\"+ RFID +\"','\"+ matricula +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -1241,14 +1241,14 @@
       "y":1580,
       "wires":[
          [
-            "76b52182.f123"
+            "cf121c84.d1728"
          ]
       ]
    },
    {
-      "id":"76b52182.f123",
+      "id":"cf121c84.d1728",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":1780,
@@ -1260,11 +1260,11 @@
       ]
    },
    {
-      "id":"a8295a2d.1bef68",
+      "id":"55a0d047.bd235",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Obtengo informacion del alumno",
-      "func":"let array = global.get(\"alumnoGlobal0\");\nlet matricula = array.matricula\nmsg.topic = \"SELECT * FROM alumnos where matricula = '\" + matricula + \"'\";\nreturn msg;",
+      "func":"let array = global.get(\"alumnoGlobal1\");\nlet matricula = array.matricula\nmsg.topic = \"SELECT * FROM alumnos where matricula = '\" + matricula + \"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -1276,32 +1276,32 @@
       "y":1580,
       "wires":[
          [
-            "75d6ad57.1f9c84"
+            "891dd827.d59578"
          ]
       ]
    },
    {
-      "id":"75d6ad57.1f9c84",
+      "id":"891dd827.d59578",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":1480,
       "y":1580,
       "wires":[
          [
-            "c8fe28f1.c02f48"
+            "b93b95f6.3c30e8"
          ]
       ]
    },
    {
-      "id":"246e5ff3.ff1e7",
+      "id":"1b5a2190.b334fe",
       "type":"ui_switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "label":"Habilitar/Deshabilitar  Lectura de temperatura ",
       "tooltip":"",
-      "group":"829fea5b.a88bf8",
+      "group":"2c8bf412.27520c",
       "order":6,
       "width":0,
       "height":0,
@@ -1323,17 +1323,17 @@
       "y":320,
       "wires":[
          [
-            "751e7249.d831fc",
-            "63d6d917.65d148"
+            "627309e1.06ffc8",
+            "b4697df2.d603e"
          ]
       ]
    },
    {
-      "id":"751e7249.d831fc",
+      "id":"627309e1.06ffc8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Indicacion de TMP opcional",
-      "func":"let temp = msg.payload ;\nglobal.set(\"LecturaDeTemperaturaGlobal0\",temp);\nmsg.payload = global.get(\"LecturaDeTemperaturaGlobal0\");\nreturn msg;",
+      "func":"let temp = msg.payload ;\nglobal.set(\"LecturaDeTemperaturaGlobal1\",temp);\nmsg.payload = global.get(\"LecturaDeTemperaturaGlobal1\");\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -1345,16 +1345,16 @@
       "y":340,
       "wires":[
          [
-            "f5b7a3ce.c48a1"
+            "5f7a0a3e.543184"
          ]
       ]
    },
    {
-      "id":"362ba2cf.8123fe",
+      "id":"9f9e73cd.cf2fe",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"TMP ? (habilitada o deshabilitada)",
-      "func":"msg.payload = global.get(\"LecturaDeTemperaturaGlobal0\");\nreturn msg;",
+      "func":"msg.payload = global.get(\"LecturaDeTemperaturaGlobal1\");\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -1366,14 +1366,14 @@
       "y":660,
       "wires":[
          [
-            "29d8e84.4e61918"
+            "12d52bdf.5d8914"
          ]
       ]
    },
    {
-      "id":"29d8e84.4e61918",
+      "id":"12d52bdf.5d8914",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decicion apertura",
       "property":"payload",
       "propertyType":"msg",
@@ -1392,17 +1392,17 @@
       "y":720,
       "wires":[
          [
-            "b16f291c.595538"
+            "4255c8f8.4deb78"
          ],
          [
-            "62bcc5dc.e6249c"
+            "6938b200.e1e98c"
          ]
       ]
    },
    {
-      "id":"3df7da13.45e026",
+      "id":"2b48df4c.dc3b1",
       "type":"ui_toast",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "position":"top right",
       "displayTime":"3",
       "highlight":"",
@@ -1420,9 +1420,9 @@
       ]
    },
    {
-      "id":"b16f291c.595538",
+      "id":"4255c8f8.4deb78",
       "type":"change",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Habilitado",
       "rules":[
          {
@@ -1442,14 +1442,14 @@
       "y":680,
       "wires":[
          [
-            "18330a4.91cb2f6"
+            "17dfd01.c52ff3"
          ]
       ]
    },
    {
-      "id":"62bcc5dc.e6249c",
+      "id":"6938b200.e1e98c",
       "type":"change",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Deshabilitado",
       "rules":[
          {
@@ -1469,16 +1469,16 @@
       "y":760,
       "wires":[
          [
-            "71d1c344.92bb1c"
+            "a81e58.8a39f1a8"
          ]
       ]
    },
    {
-      "id":"71d1c344.92bb1c",
+      "id":"a81e58.8a39f1a8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"TMP adecuada",
-      "func":"let array = global.get(\"alumnoEctGlobal0\");\nlet nombre = array.nombre;\nlet matricula = array.matricula;\nmsg.payload = \"{\\\"nombre\\\":\\\" \"+ nombre + \" \\\",\\\"id\\\":\\\"\"+ matricula + \"\\\"}\" ;\nreturn msg;",
+      "func":"let array = global.get(\"alumnoEctGlobal1\");\nlet nombre = array.nombre;\nlet matricula = array.matricula;\nmsg.payload = \"{\\\"nombre\\\":\\\" \"+ nombre + \" \\\",\\\"id\\\":\\\"\"+ matricula + \"\\\"}\" ;\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -1490,16 +1490,16 @@
       "y":760,
       "wires":[
          [
-            "8a77cd32.ab0c3"
+            "2372dc96.a11534"
          ]
       ]
    },
    {
-      "id":"8a77cd32.ab0c3",
+      "id":"2372dc96.a11534",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/DeshabilitadoTemperatura/Alumno/0",
+      "topic":"Gabanni/UAMazc/DeshabilitadoTemperatura/Alumno/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -1515,11 +1515,11 @@
       ]
    },
    {
-      "id":"23382fb2.19803",
+      "id":"577744e.55d75bc",
       "type":"mqtt in",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/InfoDeshabilitadoTemperatura/Alumno/0",
+      "topic":"Gabanni/UAMazc/InfoDeshabilitadoTemperatura/Alumno/1",
       "qos":"2",
       "datatype":"auto",
       "broker":"9024296.b4fb6d8",
@@ -1529,14 +1529,14 @@
       "y":980,
       "wires":[
          [
-            "dcc7a6eb.3359d8"
+            "49ef7869.99b658"
          ]
       ]
    },
    {
-      "id":"dcc7a6eb.3359d8",
+      "id":"49ef7869.99b658",
       "type":"json",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "property":"payload",
       "action":"",
@@ -1545,17 +1545,17 @@
       "y":980,
       "wires":[
          [
-            "6921c776.b44128",
-            "c7754bd2.1d2188"
+            "8c0ca94b.19bd98",
+            "2f7c65e1.67d63a"
          ]
       ]
    },
    {
-      "id":"fc282a07.b390f8",
+      "id":"239cbad7.e061a6",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"nombre",
-      "func":"let alumno = global.get(\"alumnoDeshabilitadoGlobal0\");\nlet nombre = alumno.nombre ;\nmsg.payload = nombre ;\nreturn msg;\n\n",
+      "func":"let alumno = global.get(\"alumnoDeshabilitadoGlobal1\");\nlet nombre = alumno.nombre ;\nmsg.payload = nombre ;\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -1567,16 +1567,16 @@
       "y":1080,
       "wires":[
          [
-            "879092ef.e790b"
+            "b26b6e53.805f7"
          ]
       ]
    },
    {
-      "id":"74f27ca8.c6cd94",
+      "id":"3283aeb2.ae2ec2",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"matricula",
-      "func":"let alumno = global.get(\"alumnoDeshabilitadoGlobal0\");\nlet matricula = alumno.matricula ;\nmsg.payload = matricula ;\nreturn msg;\n\n",
+      "func":"let alumno = global.get(\"alumnoDeshabilitadoGlobal1\");\nlet matricula = alumno.matricula ;\nmsg.payload = matricula ;\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -1588,16 +1588,16 @@
       "y":1120,
       "wires":[
          [
-            "8a077150.4a5b6"
+            "43877154.7867f"
          ]
       ]
    },
    {
-      "id":"953c963c.37cd28",
+      "id":"35163648.dd3f1a",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"ubicacion",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nmsg.payload = ubi;\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nmsg.payload = ubi;\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -1609,14 +1609,14 @@
       "y":1160,
       "wires":[
          [
-            "c252299d.31d638"
+            "1aad84b4.d65ffb"
          ]
       ]
    },
    {
-      "id":"e006f803.b0bda8",
+      "id":"fa16a1fb.0c5ee",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"temperatura",
       "func":"msg.payload = 0 ;\nreturn msg;\n\n",
       "outputs":1,
@@ -1630,15 +1630,15 @@
       "y":1200,
       "wires":[
          [
-            "7ac992.434dd67",
-            "e1f4fc0f.2f752"
+            "77edf61f.6e5eb8",
+            "860701a6.ed866"
          ]
       ]
    },
    {
-      "id":"4e7b8a77.354244",
+      "id":"5f243720.ea6a18",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar BD Entrada",
       "info":"Insertar en la BD de datos",
       "x":3230,
@@ -1648,11 +1648,11 @@
       ]
    },
    {
-      "id":"fa34bea8.99032",
+      "id":"b531ea20.512af8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar en Entrada",
-      "func":"let alumno  = msg.payload;\nlet RFID = alumno[0].RFID ;\nlet matricula = alumno[0].matricula;\nlet nombre = alumno[0].nombre;\nlet apellidos = alumno[0].apellidos ;\nlet temp = 0;\n\nlet area = global.get(\"UbicacionGlobal0\");\n\nmsg.topic = \"INSERT INTO registroentradaalumnos (RFID, matricula, nombre, apellidos, temperatura, area) VALUES ('\"+ RFID +\"','\"+ matricula +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;",
+      "func":"let alumno  = msg.payload;\nlet RFID = alumno[0].RFID ;\nlet matricula = alumno[0].matricula;\nlet nombre = alumno[0].nombre;\nlet apellidos = alumno[0].apellidos ;\nlet temp = 0;\n\nlet area = global.get(\"UbicacionGlobal1\");\n\nmsg.topic = \"INSERT INTO registroentradaalumnos (RFID, matricula, nombre, apellidos, temperatura, area) VALUES ('\"+ RFID +\"','\"+ matricula +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -1664,14 +1664,14 @@
       "y":1020,
       "wires":[
          [
-            "55b70dc4.9b0ef4"
+            "d2835cf.6e139a"
          ]
       ]
    },
    {
-      "id":"55b70dc4.9b0ef4",
+      "id":"d2835cf.6e139a",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":3060,
@@ -1683,11 +1683,11 @@
       ]
    },
    {
-      "id":"a9e4520d.25891",
+      "id":"e4f10eb9.ec29a",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Obtengo informacion del alumno",
-      "func":"let array = global.get(\"alumnoDeshabilitadoGlobal0\");\nlet matricula = array.matricula\nmsg.topic = \"SELECT * FROM alumnos where matricula = '\" + matricula + \"'\";\nreturn msg;",
+      "func":"let array = global.get(\"alumnoDeshabilitadoGlobal1\");\nlet matricula = array.matricula\nmsg.topic = \"SELECT * FROM alumnos where matricula = '\" + matricula + \"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -1699,31 +1699,31 @@
       "y":1020,
       "wires":[
          [
-            "7bcb4d0f.b50e34"
+            "cdaf5649.1e8478"
          ]
       ]
    },
    {
-      "id":"7bcb4d0f.b50e34",
+      "id":"cdaf5649.1e8478",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":2720,
       "y":1020,
       "wires":[
          [
-            "fa34bea8.99032",
-            "d30f2728.fa7588"
+            "b531ea20.512af8",
+            "345db676.900d8a"
          ]
       ]
    },
    {
-      "id":"6921c776.b44128",
+      "id":"8c0ca94b.19bd98",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Variable global de Usuario",
-      "func":"let alumno = msg.payload ;\nglobal.set(\"alumnoDeshabilitadoGlobal0\",alumno);\n\nmsg.payload = global.get(\"alumnoDeshabilitadoGlobal0\");\nreturn msg;\n\n",
+      "func":"let alumno = msg.payload ;\nglobal.set(\"alumnoDeshabilitadoGlobal1\",alumno);\n\nmsg.payload = global.get(\"alumnoDeshabilitadoGlobal1\");\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -1740,9 +1740,9 @@
       ]
    },
    {
-      "id":"f5b7a3ce.c48a1",
+      "id":"5f7a0a3e.543184",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Mesnaje TMP opcional",
       "func":"let temp = msg.payload ;\n msg.topic = \"Temperatura\";\nif ( temp == 1){\n    msg.payload = \"Lectura de temperatura habilitada\" ;\n}else{\n    msg.payload = \"Lectura de temperatura deshabilitada\";\n}\n\nreturn msg;",
       "outputs":1,
@@ -1756,15 +1756,15 @@
       "y":400,
       "wires":[
          [
-            "3df7da13.45e026"
+            "2b48df4c.dc3b1"
          ]
       ]
    },
    {
-      "id":"cefd7ca5.07af5",
+      "id":"1dab0d9e.9de372",
       "type":"ui_table",
-      "z":"f7ff6536.244cc8",
-      "group":"feeef7f9.470b08",
+      "z":"fa10062b.bcdec8",
+      "group":"fc79d744.6ed698",
       "name":"",
       "order":1,
       "width":"10",
@@ -1852,9 +1852,9 @@
       ]
    },
    {
-      "id":"404ce4f6.cbff2c",
+      "id":"4742260b.debf58",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Historial entrada",
       "info":"",
       "x":200,
@@ -1864,11 +1864,11 @@
       ]
    },
    {
-      "id":"3853756e.8d016a",
+      "id":"fb137943.f9ebe8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nmsg.topic = \"SELECT * FROM registroentradaalumnos WHERE area = '\" + ubi + \"'\";\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nmsg.topic = \"SELECT * FROM registroentradaalumnos WHERE area = '\" + ubi + \"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -1880,28 +1880,28 @@
       "y":1700,
       "wires":[
          [
-            "9c09a9c8.8ffef8"
+            "ef8246a7.b70da8"
          ]
       ]
    },
    {
-      "id":"9c09a9c8.8ffef8",
+      "id":"ef8246a7.b70da8",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":740,
       "y":1700,
       "wires":[
          [
-            "88607e58.ed816"
+            "74ff60c1.67ab4"
          ]
       ]
    },
    {
-      "id":"88607e58.ed816",
+      "id":"74ff60c1.67ab4",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "func":"let d = msg.payload\nmsg.payload = d;\nreturn msg;",
       "outputs":1,
@@ -1915,14 +1915,14 @@
       "y":1700,
       "wires":[
          [
-            "cefd7ca5.07af5"
+            "1dab0d9e.9de372"
          ]
       ]
    },
    {
-      "id":"b5a0c743.dc94b8",
+      "id":"bc69244e.6c35e8",
       "type":"inject",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "props":[
          {
@@ -1944,15 +1944,15 @@
       "y":1700,
       "wires":[
          [
-            "3853756e.8d016a"
+            "fb137943.f9ebe8"
          ]
       ]
    },
    {
-      "id":"606420bb.e8aab",
+      "id":"c85ca401.ccad28",
       "type":"ui_table",
-      "z":"f7ff6536.244cc8",
-      "group":"98104ae6.b93c88",
+      "z":"fa10062b.bcdec8",
+      "group":"7581af59.f392c",
       "name":"",
       "order":1,
       "width":"10",
@@ -2030,9 +2030,9 @@
       ]
    },
    {
-      "id":"dbf0141c.8d4218",
+      "id":"59bf7c5b.bbccf4",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Historial salida",
       "info":"",
       "x":200,
@@ -2042,11 +2042,11 @@
       ]
    },
    {
-      "id":"13086352.250bad",
+      "id":"c5a552a8.c7ded",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nmsg.topic = \"SELECT * FROM registrosalidaalumnos WHERE area = '\" + ubi + \"'\";\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nmsg.topic = \"SELECT * FROM registrosalidaalumnos WHERE area = '\" + ubi + \"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -2058,28 +2058,28 @@
       "y":1760,
       "wires":[
          [
-            "5e6cc12d.cb377"
+            "3db13d44.1909d2"
          ]
       ]
    },
    {
-      "id":"5e6cc12d.cb377",
+      "id":"3db13d44.1909d2",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":740,
       "y":1760,
       "wires":[
          [
-            "37e329d.31ee4d6"
+            "c0305070.8856e"
          ]
       ]
    },
    {
-      "id":"37e329d.31ee4d6",
+      "id":"c0305070.8856e",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "func":"let d = msg.payload\nmsg.payload = d;\nreturn msg;",
       "outputs":1,
@@ -2093,14 +2093,14 @@
       "y":1760,
       "wires":[
          [
-            "606420bb.e8aab"
+            "c85ca401.ccad28"
          ]
       ]
    },
    {
-      "id":"d39b311d.403d1",
+      "id":"6101b739.a04838",
       "type":"inject",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "props":[
          {
@@ -2122,16 +2122,16 @@
       "y":1760,
       "wires":[
          [
-            "13086352.250bad"
+            "c5a552a8.c7ded"
          ]
       ]
    },
    {
-      "id":"fc1c2659.f67f08",
+      "id":"be36143e.5111c8",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/AforoLleno/0",
+      "topic":"Gabanni/UAMazc/AforoLleno/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -2147,11 +2147,11 @@
       ]
    },
    {
-      "id":"c7754bd2.1d2188",
+      "id":"2f7c65e1.67d63a",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo",
-      "func":"let aforo = global.get(\"AforoGlobal0\");\naforo += 1 ;\nmsg.payload = aforo ;\nreturn msg;\n\n",
+      "func":"let aforo = global.get(\"AforoGlobal1\");\naforo += 1 ;\nmsg.payload = aforo ;\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -2163,27 +2163,27 @@
       "y":1040,
       "wires":[
          [
-            "55275cdd.473244",
-            "84d59821.7afa08"
+            "2e0fe37f.5da42c",
+            "498c96f.2406b68"
          ]
       ]
    },
    {
-      "id":"55275cdd.473244",
+      "id":"2e0fe37f.5da42c",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decicion apertura aforo",
       "property":"payload",
       "propertyType":"msg",
       "rules":[
          {
             "t":"lte",
-            "v":"AforoPermitidoGlobal0",
+            "v":"AforoPermitidoGlobal1",
             "vt":"global"
          },
          {
             "t":"gt",
-            "v":"AforoPermitidoGlobal0",
+            "v":"AforoPermitidoGlobal1",
             "vt":"global"
          }
       ],
@@ -2194,22 +2194,22 @@
       "y":980,
       "wires":[
          [
-            "fc282a07.b390f8",
-            "74f27ca8.c6cd94",
-            "953c963c.37cd28",
-            "e006f803.b0bda8",
-            "a9e4520d.25891",
-            "bd383806.af72d8"
+            "239cbad7.e061a6",
+            "3283aeb2.ae2ec2",
+            "35163648.dd3f1a",
+            "fa16a1fb.0c5ee",
+            "e4f10eb9.ec29a",
+            "5a171f.b2f318e"
          ],
          [
-            "b8e25e55.a71e6"
+            "5a5420a.a7e2fe"
          ]
       ]
    },
    {
-      "id":"b8e25e55.a71e6",
+      "id":"5a5420a.a7e2fe",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo lleno",
       "func":"\nmsg.payload = \"{\\\"Mensaje\\\":\\\" Aforo lleno \\\"}\" ;\nreturn msg;",
       "outputs":1,
@@ -2223,16 +2223,16 @@
       "y":940,
       "wires":[
          [
-            "fc1c2659.f67f08"
+            "be36143e.5111c8"
          ]
       ]
    },
    {
-      "id":"df390266.19b34",
+      "id":"2d8daa0d.20afa6",
       "type":"mqtt in",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/Ubicacion/0",
+      "topic":"Gabanni/UAMazc/Ubicacion/1",
       "qos":"2",
       "datatype":"auto",
       "broker":"9024296.b4fb6d8",
@@ -2242,15 +2242,15 @@
       "y":200,
       "wires":[
          [
-            "988c891a.94f928"
+            "a9675838.449518"
          ]
       ]
    },
    {
-      "id":"caa3435b.25b62",
+      "id":"9f1c556e.ca3688",
       "type":"ui_text",
-      "z":"f7ff6536.244cc8",
-      "group":"829fea5b.a88bf8",
+      "z":"fa10062b.bcdec8",
+      "group":"2c8bf412.27520c",
       "order":1,
       "width":0,
       "height":0,
@@ -2265,9 +2265,9 @@
       ]
    },
    {
-      "id":"988c891a.94f928",
+      "id":"a9675838.449518",
       "type":"json",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "property":"payload",
       "action":"",
@@ -2276,16 +2276,16 @@
       "y":200,
       "wires":[
          [
-            "6fbec07b.b2875"
+            "ffc1b993.759df8"
          ]
       ]
    },
    {
-      "id":"6fbec07b.b2875",
+      "id":"ffc1b993.759df8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"funcion Ubicacion",
-      "func":"let Ubicacion = msg.payload.ubicacion ;\nglobal.set(\"UbicacionGlobal0\",Ubicacion);\nmsg.payload = global.get(\"UbicacionGlobal0\");\nreturn msg;",
+      "func":"let Ubicacion = msg.payload.ubicacion ;\nglobal.set(\"UbicacionGlobal1\",Ubicacion);\nmsg.payload = global.get(\"UbicacionGlobal1\");\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -2297,16 +2297,16 @@
       "y":200,
       "wires":[
          [
-            "caa3435b.25b62",
-            "729937df.ebbe38",
-            "9af2f9fb.1e8188"
+            "9f1c556e.ca3688",
+            "957feea4.f65c4",
+            "410b2258.c7898c"
          ]
       ]
    },
    {
-      "id":"161e73c3.4263cc",
+      "id":"59dc9e1f.9acd",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Ubicacion",
       "info":"En este topic, la cerradura nos manda su ubicacion en donde esta instalado(laboratorio), y convertimos la variable en global",
       "x":160,
@@ -2316,9 +2316,9 @@
       ]
    },
    {
-      "id":"7143f812.55aaf8",
+      "id":"212a390f.4d70f6",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Cerradura 0 (Laboratorio de Sistemas Digitales)",
       "info":"",
       "x":1180,
@@ -2328,9 +2328,9 @@
       ]
    },
    {
-      "id":"daf2297b.843008",
+      "id":"8c92dde9.3bfa3",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Lectura de temperatura opcional",
       "info":"",
       "x":1470,
@@ -2340,9 +2340,9 @@
       ]
    },
    {
-      "id":"d10f86f5.aaf558",
+      "id":"cc97a4c2.919608",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Recibimos los datos de la lectura de temperatura",
       "info":"",
       "x":240,
@@ -2352,9 +2352,9 @@
       ]
    },
    {
-      "id":"65a758dd.503dd8",
+      "id":"ca3ffb14.ab0418",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo",
       "info":"",
       "x":1310,
@@ -2364,9 +2364,9 @@
       ]
    },
    {
-      "id":"e39fc6ae.8ae5c8",
+      "id":"94843b24.c44ae8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar en Salida Historial",
       "func":"let RFID = msg.payload.RFID;\nlet matricula = msg.payload.matricula;\nlet nombre = msg.payload.nombre;\nlet apellidos = msg.payload.apellidos;\nlet area = msg.payload.area;\n\n\nmsg.topic = \"INSERT INTO registrosalidaalumnoshistorial (RFID, matricula, nombre, apellidos,  area) VALUES ('\"+ RFID +\"','\"+ matricula +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ area +\"')\";\nreturn msg;",
       "outputs":1,
@@ -2380,16 +2380,16 @@
       "y":440,
       "wires":[
          [
-            "32f6092b.ee20f6"
+            "b7f24a10.f34298"
          ]
       ]
    },
    {
-      "id":"a4f60045.f8c42",
+      "id":"9a3bbf89.6665c",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar en Entrada",
-      "func":"let alumno  = msg.payload;\nlet RFID = alumno[0].RFID ;\nlet matricula = alumno[0].matricula;\nlet nombre = alumno[0].nombre;\nlet apellidos = alumno[0].apellidos ;\n\nlet array = global.get(\"alumnoGlobal0\");\nlet temp = array.temperatura;\n\nlet area = global.get(\"UbicacionGlobal0\");\n\nmsg.topic = \"INSERT INTO registroentradaalumnoshistorial (RFID, matricula, nombre, apellidos, temperatura, area) VALUES ('\"+ RFID +\"','\"+ matricula +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;",
+      "func":"let alumno  = msg.payload;\nlet RFID = alumno[0].RFID ;\nlet matricula = alumno[0].matricula;\nlet nombre = alumno[0].nombre;\nlet apellidos = alumno[0].apellidos ;\n\nlet array = global.get(\"alumnoGlobal1\");\nlet temp = array.temperatura;\n\nlet area = global.get(\"UbicacionGlobal1\");\n\nmsg.topic = \"INSERT INTO registroentradaalumnoshistorial (RFID, matricula, nombre, apellidos, temperatura, area) VALUES ('\"+ RFID +\"','\"+ matricula +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -2401,16 +2401,16 @@
       "y":1360,
       "wires":[
          [
-            "d7c1031d.2fe04"
+            "a99f3258.aea36"
          ]
       ]
    },
    {
-      "id":"d30f2728.fa7588",
+      "id":"345db676.900d8a",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar en Entrada",
-      "func":"let alumno  = msg.payload;\nlet RFID = alumno[0].RFID ;\nlet matricula = alumno[0].matricula;\nlet nombre = alumno[0].nombre;\nlet apellidos = alumno[0].apellidos ;\nlet temp = 0;\n\nlet area = global.get(\"UbicacionGlobal0\");\n\nmsg.topic = \"INSERT INTO registroentradaalumnoshistorial (RFID, matricula, nombre, apellidos, temperatura, area) VALUES ('\"+ RFID +\"','\"+ matricula +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;",
+      "func":"let alumno  = msg.payload;\nlet RFID = alumno[0].RFID ;\nlet matricula = alumno[0].matricula;\nlet nombre = alumno[0].nombre;\nlet apellidos = alumno[0].apellidos ;\nlet temp = 0;\n\nlet area = global.get(\"UbicacionGlobal1\");\n\nmsg.topic = \"INSERT INTO registroentradaalumnoshistorial (RFID, matricula, nombre, apellidos, temperatura, area) VALUES ('\"+ RFID +\"','\"+ matricula +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -2422,14 +2422,14 @@
       "y":1060,
       "wires":[
          [
-            "55b70dc4.9b0ef4"
+            "d2835cf.6e139a"
          ]
       ]
    },
    {
-      "id":"52d08e4b.00554",
+      "id":"47c8fdd4.157d24",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":1960,
@@ -2441,11 +2441,11 @@
       ]
    },
    {
-      "id":"ca838e96.ee4a8",
+      "id":"72356403.cdf78c",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar en aforo Actual",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nlet aforo = global.get(\"AforoGlobal0\");\n\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET aforoActual = '\" + aforo +\"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nlet aforo = global.get(\"AforoGlobal1\");\n\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET aforoActual = '\" + aforo +\"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -2457,16 +2457,16 @@
       "y":880,
       "wires":[
          [
-            "52d08e4b.00554"
+            "47c8fdd4.157d24"
          ]
       ]
    },
    {
-      "id":"1f77390f.297457",
+      "id":"114dd64a.4f5d1a",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar en aforo Actual",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nlet aforo = global.get(\"AforoPermitidoGlobal0\");\n\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET aforoPermitido = '\" + aforo +\"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nlet aforo = global.get(\"AforoPermitidoGlobal1\");\n\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET aforoPermitido = '\" + aforo +\"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -2478,14 +2478,14 @@
       "y":220,
       "wires":[
          [
-            "3cbb71d3.629dee"
+            "3a6746b3.05233a"
          ]
       ]
    },
    {
-      "id":"3cbb71d3.629dee",
+      "id":"3a6746b3.05233a",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":2100,
@@ -2497,9 +2497,9 @@
       ]
    },
    {
-      "id":"a18d2304.e1674",
+      "id":"fd5d25ac.f1e468",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Si recibo un mensaje se reinicio el servidor",
       "info":"",
       "x":400,
@@ -2509,9 +2509,9 @@
       ]
    },
    {
-      "id":"729937df.ebbe38",
+      "id":"957feea4.f65c4",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo permitdo y actual almacenado",
       "func":"let ubi = msg.payload;\nmsg.topic = \"SELECT * FROM laboratoriosyaulas where nombre = '\" + ubi + \"'\";\nreturn msg;",
       "outputs":1,
@@ -2525,37 +2525,37 @@
       "y":260,
       "wires":[
          [
-            "6576596d.5ed1e8"
+            "fee4832d.8e13a"
          ]
       ]
    },
    {
-      "id":"6576596d.5ed1e8",
+      "id":"fee4832d.8e13a",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":940,
       "y":260,
       "wires":[
          [
-            "4cea36b6.bdbd98",
-            "dd5bcbe9.b20608",
-            "9b59e751.dbd388",
-            "4bf87395.d934ac",
-            "9c311fdb.ce0aa",
-            "ed514c75.4346a",
-            "8e679dfe.81861",
-            "cc93b466.168bd8"
+            "26f84d4.e749cb2",
+            "58c28749.3b3b58",
+            "f4d75bb1.5d3cf8",
+            "1bcd9cac.7504c3",
+            "9ffef39f.eaa07",
+            "34975762.145d78",
+            "73b1bfb2.3cec2",
+            "1dfb2f87.1b3d5"
          ]
       ]
    },
    {
-      "id":"4cea36b6.bdbd98",
+      "id":"26f84d4.e749cb2",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo permitdo ",
-      "func":"let aforo =  Number(msg.payload[0].aforoPermitido);\nglobal.set(\"AforoPermitidoGlobal0\",aforo);\nmsg.payload = aforo;\nmsg.topic = \" \";\nreturn msg;\n",
+      "func":"let aforo =  Number(msg.payload[0].aforoPermitido);\nglobal.set(\"AforoPermitidoGlobal1\",aforo);\nmsg.payload = aforo;\nmsg.topic = \" \";\nreturn msg;\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -2567,16 +2567,16 @@
       "y":240,
       "wires":[
          [
-            "abde14de.3f97d8"
+            "ac52d040.f206d"
          ]
       ]
    },
    {
-      "id":"dd5bcbe9.b20608",
+      "id":"58c28749.3b3b58",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo actual",
-      "func":"let aforo =  Number(msg.payload[0].aforoActual);\nglobal.set(\"AforoGlobal0\",aforo);\nmsg.payload =  aforo;\nreturn msg;\n",
+      "func":"let aforo =  Number(msg.payload[0].aforoActual);\nglobal.set(\"AforoGlobal1\",aforo);\nmsg.payload =  aforo;\nreturn msg;\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -2588,16 +2588,16 @@
       "y":280,
       "wires":[
          [
-            "bc19287c.a6f288"
+            "15eeea9f.719995"
          ]
       ]
    },
    {
-      "id":"bc19287c.a6f288",
+      "id":"15eeea9f.719995",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Variable global de aforo",
-      "func":"let GlobalAforo = msg.payload ;\nglobal.set(\"AforoGlobal0\",GlobalAforo);\n\nmsg.payload = global.get(\"AforoGlobal0\");\nreturn msg;\n\n",
+      "func":"let GlobalAforo = msg.payload ;\nglobal.set(\"AforoGlobal1\",GlobalAforo);\n\nmsg.payload = global.get(\"AforoGlobal1\");\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -2609,16 +2609,16 @@
       "y":900,
       "wires":[
          [
-            "b51dea6.6c70718"
+            "d5e51dd7.b0e16"
          ]
       ]
    },
    {
-      "id":"63d6d917.65d148",
+      "id":"b4697df2.d603e",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar Opcion Temperatura",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nlet op = msg.payload;\n\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET LecturaTemperatura = '\" + op +\"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nlet op = msg.payload;\n\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET LecturaTemperatura = '\" + op +\"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -2630,14 +2630,14 @@
       "y":300,
       "wires":[
          [
-            "5034b120.a62a6"
+            "98173a73.89e4a8"
          ]
       ]
    },
    {
-      "id":"5034b120.a62a6",
+      "id":"98173a73.89e4a8",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":2040,
@@ -2649,9 +2649,9 @@
       ]
    },
    {
-      "id":"9b59e751.dbd388",
+      "id":"f4d75bb1.5d3cf8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Opcion temperatura",
       "func":"let op = msg.payload[0].LecturaTemperatura;\nmsg.payload = op;\nlet num  = false ;\nif ( op == \"true\"){\n    num = true ;\n}else {\n    num = false ;\n}\nmsg.payload = num;\nmsg.topic = \"Lectura de temperatura\";\nreturn msg;",
       "outputs":1,
@@ -2665,16 +2665,16 @@
       "y":320,
       "wires":[
          [
-            "246e5ff3.ff1e7"
+            "1b5a2190.b334fe"
          ]
       ]
    },
    {
-      "id":"134c01b1.2f18ce",
+      "id":"19ddeceb.2198f3",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/Bloqueo/0",
+      "topic":"Gabanni/UAMazc/Bloqueo/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -2690,13 +2690,13 @@
       ]
    },
    {
-      "id":"6b953dc7.95a914",
+      "id":"6e09bb06.98ebf4",
       "type":"ui_switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "label":"Bloqueo / Desloqueo cerradura",
       "tooltip":"",
-      "group":"829fea5b.a88bf8",
+      "group":"2c8bf412.27520c",
       "order":7,
       "width":0,
       "height":0,
@@ -2718,14 +2718,14 @@
       "y":1860,
       "wires":[
          [
-            "134c01b1.2f18ce"
+            "19ddeceb.2198f3"
          ]
       ]
    },
    {
-      "id":"23a5cab7.d5ef96",
+      "id":"addbddb4.71877",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Desbloqueo / Bloqueo cerradura",
       "info":"Esta funcion desbloquea la puerta si el administrador asi lo desea ",
       "x":250,
@@ -2735,9 +2735,9 @@
       ]
    },
    {
-      "id":"b31aa7f6.a1ce78",
+      "id":"16c9ebab.210fc4",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decicion de Temperatura",
       "property":"payload",
       "propertyType":"msg",
@@ -2760,19 +2760,19 @@
       "y":2800,
       "wires":[
          [
-            "9a78ce60.8f869"
+            "24e16f40.c127e"
          ],
          [
-            "f865b486.1b2228",
-            "2bb1a0fd.36b2f",
-            "2389b244.a53efe"
+            "4c6c5d18.d3d834",
+            "7526aed5.3657a",
+            "b223ec47.205a1"
          ]
       ]
    },
    {
-      "id":"9a78ce60.8f869",
+      "id":"24e16f40.c127e",
       "type":"change",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Temperatura adecuada",
       "rules":[
          {
@@ -2792,18 +2792,18 @@
       "y":2680,
       "wires":[
          [
-            "7733c06f.7c8",
-            "6fe1bd67.c31fb4",
-            "5c43be2.2ccff4",
-            "bd383806.af72d8",
-            "56a61210.2603dc"
+            "c7d52a89.b8ae48",
+            "656a9788.f359b8",
+            "d431a165.de414",
+            "5a171f.b2f318e",
+            "748dbd33.d09cf4"
          ]
       ]
    },
    {
-      "id":"86a0780b.d5c938",
+      "id":"2ae5ba32.6f69b6",
       "type":"json",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "property":"payload",
       "action":"",
@@ -2812,16 +2812,16 @@
       "y":2780,
       "wires":[
          [
-            "347ad764.af5328",
-            "fff1e19f.5eec3"
+            "79fbc400.31abcc",
+            "13654944.e553f7"
          ]
       ]
    },
    {
-      "id":"e96435eb.8fb758",
+      "id":"f1f407ff.efb7e8",
       "type":"ui_text",
-      "z":"f7ff6536.244cc8",
-      "group":"fd3ea40d.6a26c8",
+      "z":"fa10062b.bcdec8",
+      "group":"378ceaaa.0b7336",
       "order":9,
       "width":0,
       "height":0,
@@ -2836,9 +2836,9 @@
       ]
    },
    {
-      "id":"af2c4b82.213728",
+      "id":"e47bfc7e.efdc",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"nombre",
       "func":"let profesor = msg.payload ;\nmsg.payload = profesor[0].nombre + \" \" + profesor[0].apellidos ;\nreturn msg;",
       "outputs":1,
@@ -2852,15 +2852,15 @@
       "y":2580,
       "wires":[
          [
-            "e96435eb.8fb758"
+            "f1f407ff.efb7e8"
          ]
       ]
    },
    {
-      "id":"df5cf132.49fbb",
+      "id":"6946a8fa.296c58",
       "type":"ui_text",
-      "z":"f7ff6536.244cc8",
-      "group":"fd3ea40d.6a26c8",
+      "z":"fa10062b.bcdec8",
+      "group":"378ceaaa.0b7336",
       "order":8,
       "width":0,
       "height":0,
@@ -2875,9 +2875,9 @@
       ]
    },
    {
-      "id":"47f4ee6f.c0e4b",
+      "id":"b19ef279.9622",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"noEmpleado",
       "func":"let profesor = msg.payload ;\nmsg.payload = profesor[0].noEmpleado ;\nreturn msg;",
       "outputs":1,
@@ -2891,14 +2891,14 @@
       "y":2620,
       "wires":[
          [
-            "df5cf132.49fbb"
+            "6946a8fa.296c58"
          ]
       ]
    },
    {
-      "id":"ae85886c.ad3158",
+      "id":"74612159.fdce1",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decicion correo tempertaura",
       "property":"payload",
       "propertyType":"msg",
@@ -2924,16 +2924,16 @@
             
          ],
          [
-            "a2506214.e1fe8"
+            "15026920.852897"
          ]
       ]
    },
    {
-      "id":"2bb1a0fd.36b2f",
+      "id":"7526aed5.3657a",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Lectura de temperatura",
-      "func":"let array = global.get(\"profesorGlobal0\");\nlet temperatura =  array.temperatura;\nmsg.payload = temperatura;\nreturn msg;",
+      "func":"let array = global.get(\"profesorGlobal1\");\nlet temperatura =  array.temperatura;\nmsg.payload = temperatura;\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -2945,17 +2945,17 @@
       "y":3120,
       "wires":[
          [
-            "ae85886c.ad3158",
-            "e970eb9b.bcffb8"
+            "74612159.fdce1",
+            "830f9b10.3fe668"
          ]
       ]
    },
    {
-      "id":"e75b3e6f.f8328",
+      "id":"2a029ea3.f9e282",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/AforoLleno/0",
+      "topic":"Gabanni/UAMazc/AforoLleno/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -2971,9 +2971,9 @@
       ]
    },
    {
-      "id":"f1bb9c7a.b10da",
+      "id":"7cc0ba48.4c8a94",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo lleno",
       "func":"\nmsg.payload = \"{\\\"Mensaje\\\":\\\" Aforo lleno \\\"}\" ;\nreturn msg;",
       "outputs":1,
@@ -2987,26 +2987,26 @@
       "y":2860,
       "wires":[
          [
-            "e75b3e6f.f8328"
+            "2a029ea3.f9e282"
          ]
       ]
    },
    {
-      "id":"7430eec6.2c5e4",
+      "id":"faeee958.5ede98",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decicion apertura aforo",
       "property":"payload",
       "propertyType":"msg",
       "rules":[
          {
             "t":"lte",
-            "v":"AforoPermitidoGlobal0",
+            "v":"AforoPermitidoGlobal1",
             "vt":"global"
          },
          {
             "t":"gt",
-            "v":"AforoPermitidoGlobal0",
+            "v":"AforoPermitidoGlobal1",
             "vt":"global"
          }
       ],
@@ -3017,19 +3017,19 @@
       "y":2840,
       "wires":[
          [
-            "e5149d4c.d6435"
+            "17c45554.be01ab"
          ],
          [
-            "f1bb9c7a.b10da"
+            "7cc0ba48.4c8a94"
          ]
       ]
    },
    {
-      "id":"347ad764.af5328",
+      "id":"79fbc400.31abcc",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo",
-      "func":"let aforo = global.get(\"AforoGlobal0\");\naforo += 1 ;\nmsg.payload = aforo ;\nreturn msg;\n\n",
+      "func":"let aforo = global.get(\"AforoGlobal1\");\naforo += 1 ;\nmsg.payload = aforo ;\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -3041,16 +3041,16 @@
       "y":2840,
       "wires":[
          [
-            "7430eec6.2c5e4"
+            "faeee958.5ede98"
          ]
       ]
    },
    {
-      "id":"7733c06f.7c8",
+      "id":"c7d52a89.b8ae48",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"temperatura",
-      "func":"let array = global.get(\"profesorGlobal0\");\nlet temperatura =  array.temperatura;\nmsg.payload = temperatura;\nreturn msg;",
+      "func":"let array = global.get(\"profesorGlobal1\");\nlet temperatura =  array.temperatura;\nmsg.payload = temperatura;\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -3062,16 +3062,16 @@
       "y":2660,
       "wires":[
          [
-            "586dbf8e.d28dc"
+            "9d33ba95.636628"
          ]
       ]
    },
    {
-      "id":"e5149d4c.d6435",
+      "id":"17c45554.be01ab",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo disponible",
-      "func":"let array = global.get(\"profesorGlobal0\");\nlet temperatura =  array.temperatura;\nmsg.payload = temperatura;\nreturn msg;",
+      "func":"let array = global.get(\"profesorGlobal1\");\nlet temperatura =  array.temperatura;\nmsg.payload = temperatura;\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -3083,16 +3083,16 @@
       "y":2800,
       "wires":[
          [
-            "b31aa7f6.a1ce78"
+            "16c9ebab.210fc4"
          ]
       ]
    },
    {
-      "id":"5e78b799.60ce68",
+      "id":"d7b84a0f.7b0368",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/TemperaturaAlta/0",
+      "topic":"Gabanni/UAMazc/TemperaturaAlta/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -3108,9 +3108,9 @@
       ]
    },
    {
-      "id":"f865b486.1b2228",
+      "id":"4c6c5d18.d3d834",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aviso de temperatura alta",
       "func":"msg.payload = \"{\\\"Mensaje\\\":\\\" Temperatura Alta \\\"}\" ;\nreturn msg;",
       "outputs":1,
@@ -3124,16 +3124,16 @@
       "y":3060,
       "wires":[
          [
-            "5e78b799.60ce68"
+            "d7b84a0f.7b0368"
          ]
       ]
    },
    {
-      "id":"b008d5b.30ba528",
+      "id":"3e62154c.2e3d2a",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar en Entrada",
-      "func":"let profesor  = msg.payload;\nlet noEmpleado = profesor[0].noEmpleado ;\nlet nombre = profesor[0].nombre;\nlet apellidos = profesor[0].apellidos;\nlet clave = profesor[0].clave ;\nlet huella = profesor[0].huella ;\n\nlet array = global.get(\"profesorGlobal0\");\nlet temp = array.temperatura;\n\nlet area = global.get(\"UbicacionGlobal0\");\n\nmsg.topic = \"INSERT INTO registroentradaprofesoresypersonal (clave, huella, noEmpleado, nombre, apellidos, temperatura, area) VALUES ('\"+ clave +\"','\"+ huella +\"','\"+ noEmpleado +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;\n\n",
+      "func":"let profesor  = msg.payload;\nlet noEmpleado = profesor[0].noEmpleado ;\nlet nombre = profesor[0].nombre;\nlet apellidos = profesor[0].apellidos;\nlet clave = profesor[0].clave ;\nlet huella = profesor[0].huella ;\n\nlet array = global.get(\"profesorGlobal1\");\nlet temp = array.temperatura;\n\nlet area = global.get(\"UbicacionGlobal1\");\n\nmsg.topic = \"INSERT INTO registroentradaprofesoresypersonal (clave, huella, noEmpleado, nombre, apellidos, temperatura, area) VALUES ('\"+ clave +\"','\"+ huella +\"','\"+ noEmpleado +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -3145,14 +3145,14 @@
       "y":2700,
       "wires":[
          [
-            "da2dd452.b6fa98"
+            "3ffc8e4.df73a72"
          ]
       ]
    },
    {
-      "id":"da2dd452.b6fa98",
+      "id":"3ffc8e4.df73a72",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":2840,
@@ -3164,11 +3164,11 @@
       ]
    },
    {
-      "id":"98e04762.00fe68",
+      "id":"dc4d55c3.c4dfe8",
       "type":"mqtt in",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/compararHuella/Profesor/0",
+      "topic":"Gabanni/UAMazc/compararHuella/Profesor/1",
       "qos":"2",
       "datatype":"auto",
       "broker":"9024296.b4fb6d8",
@@ -3178,14 +3178,14 @@
       "y":2000,
       "wires":[
          [
-            "9e378a5d.803da8"
+            "c0c21b2c.4af528"
          ]
       ]
    },
    {
-      "id":"5278f871.e14b08",
+      "id":"af0ec4e1.c95d88",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"busqueda profesor o administrativo",
       "func":"msg.topic = \"SELECT * FROM profesoresypersonal WHERE huella = '\" + msg.payload.dactilar + \"'\";\nreturn msg;",
       "outputs":1,
@@ -3199,30 +3199,30 @@
       "y":2060,
       "wires":[
          [
-            "cd669a10.2f19e8"
+            "35d7ba8d.f24c86"
          ]
       ]
    },
    {
-      "id":"cd669a10.2f19e8",
+      "id":"35d7ba8d.f24c86",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":300,
       "y":2220,
       "wires":[
          [
-            "ad50ac64.efb29"
+            "60ae33a.a1957cc"
          ]
       ]
    },
    {
-      "id":"ad50ac64.efb29",
+      "id":"60ae33a.a1957cc",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"resultado profesor o administrativo",
-      "func":"let array = msg.payload;\nif (array.length > 0 ){\n    let profesor = array[0]; \n    global.set(\"profesorEctGlobal0\",profesor);\n    msg.payload = global.get(\"profesorEctGlobal0\");\n    return msg;\n}else {\n    msg.payload = \"No encontrado\";\n    return msg;\n}\n",
+      "func":"let array = msg.payload;\nif (array.length > 0 ){\n    let profesor = array[0]; \n    global.set(\"profesorEctGlobal1\",profesor);\n    msg.payload = global.get(\"profesorEctGlobal1\");\n    return msg;\n}else {\n    msg.payload = \"No encontrado\";\n    return msg;\n}\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -3234,14 +3234,14 @@
       "y":2220,
       "wires":[
          [
-            "bc6a5ae6.356a28"
+            "becd2f30.b76a3"
          ]
       ]
    },
    {
-      "id":"1de844fc.9e9cfb",
+      "id":"50cd08c6.cfc428",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Comprobar password RFID en BD Alumnos",
       "info":"Esta fucnion recibe el numero de identificacion RFID\ndel alumno que desea ingresar, en caso de que la encunetre nos da la informacion del alumno, en caso contrario nos devuelve un \"No encontrado\"",
       "x":290,
@@ -3251,9 +3251,9 @@
       ]
    },
    {
-      "id":"9e378a5d.803da8",
+      "id":"c0c21b2c.4af528",
       "type":"json",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "property":"payload",
       "action":"",
@@ -3262,17 +3262,17 @@
       "y":2060,
       "wires":[
          [
-            "5278f871.e14b08",
-            "62a429e9.a90958"
+            "af0ec4e1.c95d88",
+            "f10e3bc2.1702a8"
          ]
       ]
    },
    {
-      "id":"50a55da7.a50034",
+      "id":"e6343cec.909a2",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/SinAcceso/0",
+      "topic":"Gabanni/UAMazc/SinAcceso/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -3288,9 +3288,9 @@
       ]
    },
    {
-      "id":"bc6a5ae6.356a28",
+      "id":"becd2f30.b76a3",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decision ",
       "property":"payload",
       "propertyType":"msg",
@@ -3313,17 +3313,17 @@
       "y":2320,
       "wires":[
          [
-            "c0765269.c575c"
+            "4204320f.859dec"
          ],
          [
-            "f6340036.00ae7"
+            "c8488521.9b2cc8"
          ]
       ]
    },
    {
-      "id":"f6340036.00ae7",
+      "id":"c8488521.9b2cc8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"No encontrado",
       "func":"\nmsg.payload = \"{\\\"Mensaje\\\":\\\" No encontrado \\\"}\" ;\nreturn msg;",
       "outputs":1,
@@ -3337,16 +3337,16 @@
       "y":2360,
       "wires":[
          [
-            "50a55da7.a50034"
+            "e6343cec.909a2"
          ]
       ]
    },
    {
-      "id":"407cd415.04dacc",
+      "id":"23e7b8ab.a06bd8",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/LecturaTemperatura/Profesor/0",
+      "topic":"Gabanni/UAMazc/LecturaTemperatura/Profesor/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -3362,11 +3362,11 @@
       ]
    },
    {
-      "id":"b4c80a05.4c4218",
+      "id":"6680791a.f7e218",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"TMP adecuada",
-      "func":"let array = global.get(\"profesorEctGlobal0\");\nlet nombre = array.nombre;\nlet noEmpleado = array.noEmpleado;\nmsg.payload = \"{\\\"nombre\\\":\\\" \"+ nombre + \" \\\",\\\"id\\\":\\\"\"+ noEmpleado + \"\\\"}\" ;\nreturn msg;",
+      "func":"let array = global.get(\"profesorEctGlobal1\");\nlet nombre = array.nombre;\nlet noEmpleado = array.noEmpleado;\nmsg.payload = \"{\\\"nombre\\\":\\\" \"+ nombre + \" \\\",\\\"id\\\":\\\"\"+ noEmpleado + \"\\\"}\" ;\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -3378,16 +3378,16 @@
       "y":2380,
       "wires":[
          [
-            "407cd415.04dacc"
+            "23e7b8ab.a06bd8"
          ]
       ]
    },
    {
-      "id":"c0765269.c575c",
+      "id":"4204320f.859dec",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Encontrado",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nmsg.topic = \"SELECT * FROM laboratoriosyaulas where nombre = '\"+ ubi +\"'\";\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nmsg.topic = \"SELECT * FROM laboratoriosyaulas where nombre = '\"+ ubi +\"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -3399,14 +3399,14 @@
       "y":2300,
       "wires":[
          [
-            "42d89a58.abf5d4"
+            "204b6e5e.a9a012"
          ]
       ]
    },
    {
-      "id":"a9599bbc.2699d8",
+      "id":"4cabaed1.13437",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decision ",
       "property":"payload",
       "propertyType":"msg",
@@ -3429,33 +3429,33 @@
       "y":2300,
       "wires":[
          [
-            "86b16998.898b58"
+            "b7c70b76.322b78"
          ],
          [
-            "7ea06c8f.ca9a94"
+            "d1f5b2ba.d2e39"
          ]
       ]
    },
    {
-      "id":"42d89a58.abf5d4",
+      "id":"204b6e5e.a9a012",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":620,
       "y":2300,
       "wires":[
          [
-            "957c76fe.648908"
+            "64d9a411.0dcc1c"
          ]
       ]
    },
    {
-      "id":"957c76fe.648908",
+      "id":"64d9a411.0dcc1c",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"busqueda profesor (registroentradaalumnos)",
-      "func":"let array = msg.payload;\nif (array[0].profesorAdentro == \"false\" ){\n    msg.payload = \"Desocupado\"; \n    return msg;\n}else {\n    global.set(\"EstadoGlobal0\",array[0]);\n    msg.payload = global.get(\"EstadoGlobal0\");\n    return msg;\n}\n",
+      "func":"let array = msg.payload;\nif (array[0].profesorAdentro == \"false\" ){\n    msg.payload = \"Desocupado\"; \n    return msg;\n}else {\n    global.set(\"EstadoGlobal1\",array[0]);\n    msg.payload = global.get(\"EstadoGlobal1\");\n    return msg;\n}\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -3467,16 +3467,16 @@
       "y":2300,
       "wires":[
          [
-            "a9599bbc.2699d8"
+            "4cabaed1.13437"
          ]
       ]
    },
    {
-      "id":"4b1dbb3a.275b04",
+      "id":"2551bcc4.6157f4",
       "type":"mqtt in",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/InfoTemperatura/Profesor/0",
+      "topic":"Gabanni/UAMazc/InfoTemperatura/Profesor/1",
       "qos":"2",
       "datatype":"auto",
       "broker":"9024296.b4fb6d8",
@@ -3486,32 +3486,32 @@
       "y":2720,
       "wires":[
          [
-            "86a0780b.d5c938"
+            "2ae5ba32.6f69b6"
          ]
       ]
    },
    {
-      "id":"9fa31283.e5bdb",
+      "id":"489a8e12.dcd18",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":2340,
       "y":2700,
       "wires":[
          [
-            "b008d5b.30ba528",
-            "dfc31e11.ea375",
-            "a765c1f5.f170f"
+            "3e62154c.2e3d2a",
+            "770b1e1c.4959e",
+            "5596e839.d417e8"
          ]
       ]
    },
    {
-      "id":"52ce9d0d.8deef4",
+      "id":"36773eb8.41fde2",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Eliminar en laboratoriosyaulas",
-      "func":"let noEmpleado = \" \" ;\nlet nombrePro = \" \";\nlet pA = \"false\"\n\nlet ubi = global.get(\"UbicacionGlobal0\");\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET profesorAdentro  = '\" + pA +\"' , noEmpleado = '\"+ noEmpleado +\"', nombrePro = '\" + nombrePro + \"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;\n\n",
+      "func":"let noEmpleado = \" \" ;\nlet nombrePro = \" \";\nlet pA = \"false\"\n\nlet ubi = global.get(\"UbicacionGlobal1\");\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET profesorAdentro  = '\" + pA +\"' , noEmpleado = '\"+ noEmpleado +\"', nombrePro = '\" + nombrePro + \"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -3523,30 +3523,30 @@
       "y":2120,
       "wires":[
          [
-            "7aaddf70.05bea"
+            "f48d9314.cbac"
          ]
       ]
    },
    {
-      "id":"7aaddf70.05bea",
+      "id":"f48d9314.cbac",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":2120,
       "y":2180,
       "wires":[
          [
-            "899d5aed.a11918"
+            "88684a82.129088"
          ]
       ]
    },
    {
-      "id":"32a51636.59dbda",
+      "id":"d03f6025.bb1a2",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Eliminar de Entrada",
-      "func":"let profesor = global.get(\"profesorEctGlobal0\");\nlet noEmpleado = profesor.noEmpleado ;\nmsg.topic = \"DELETE FROM registroentradaprofesoresypersonal where noEmpleado = '\"+ noEmpleado +\"'\";\nreturn msg;\n",
+      "func":"let profesor = global.get(\"profesorEctGlobal1\");\nlet noEmpleado = profesor.noEmpleado ;\nmsg.topic = \"DELETE FROM registroentradaprofesoresypersonal where noEmpleado = '\"+ noEmpleado +\"'\";\nreturn msg;\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -3558,16 +3558,16 @@
       "y":2160,
       "wires":[
          [
-            "7aaddf70.05bea"
+            "f48d9314.cbac"
          ]
       ]
    },
    {
-      "id":"c5feed1c.2601a",
+      "id":"82a2a5a.296bd58",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/Ocupado/0",
+      "topic":"Gabanni/UAMazc/Ocupado/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -3583,9 +3583,9 @@
       ]
    },
    {
-      "id":"3c0f3197.6d530e",
+      "id":"224199f5.873d66",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Ocupado",
       "func":"msg.payload = \"{\\\"Mensaje\\\":\\\" Ocupado \\\"}\" ;\nreturn msg;",
       "outputs":1,
@@ -3599,16 +3599,16 @@
       "y":2300,
       "wires":[
          [
-            "c5feed1c.2601a"
+            "82a2a5a.296bd58"
          ]
       ]
    },
    {
-      "id":"39a6a981.746d46",
+      "id":"a4f3c51d.8bd348",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Registro",
-      "func":"let profesor  = msg.payload;\nlet noEmpleado = profesor[0].noEmpleado ;\nlet nombre = profesor[0].nombre;\nlet apellidos = profesor[0].apellidos;\nlet clave = profesor[0].clave ;\nlet huella = profesor[0].huella ;\n\nlet array = global.get(\"profesorGlobal0\");\nlet temp = array.temperatura;\n\nlet area = global.get(\"UbicacionGlobal0\");\n\nmsg.topic = \"INSERT INTO temperaturaaltaprofesoresypersonal (clave, huella, noEmpleado, nombre, apellidos, temperatura, area) VALUES ('\"+ clave +\"','\"+ huella +\"','\"+ noEmpleado +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;",
+      "func":"let profesor  = msg.payload;\nlet noEmpleado = profesor[0].noEmpleado ;\nlet nombre = profesor[0].nombre;\nlet apellidos = profesor[0].apellidos;\nlet clave = profesor[0].clave ;\nlet huella = profesor[0].huella ;\n\nlet array = global.get(\"profesorGlobal1\");\nlet temp = array.temperatura;\n\nlet area = global.get(\"UbicacionGlobal1\");\n\nmsg.topic = \"INSERT INTO temperaturaaltaprofesoresypersonal (clave, huella, noEmpleado, nombre, apellidos, temperatura, area) VALUES ('\"+ clave +\"','\"+ huella +\"','\"+ noEmpleado +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -3620,14 +3620,14 @@
       "y":3180,
       "wires":[
          [
-            "a2440b.171b3bf8"
+            "28545d5e.a43122"
          ]
       ]
    },
    {
-      "id":"a2440b.171b3bf8",
+      "id":"28545d5e.a43122",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":1180,
@@ -3639,11 +3639,11 @@
       ]
    },
    {
-      "id":"7ea06c8f.ca9a94",
+      "id":"d1f5b2ba.d2e39",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"TMP ? (habilitada o deshabilitada)",
-      "func":"msg.payload = global.get(\"LecturaDeTemperaturaGlobal0\");\nreturn msg;",
+      "func":"msg.payload = global.get(\"LecturaDeTemperaturaGlobal1\");\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -3655,14 +3655,14 @@
       "y":2360,
       "wires":[
          [
-            "a4287fb4.b0a7d"
+            "1b91cbc5.451fb4"
          ]
       ]
    },
    {
-      "id":"a4287fb4.b0a7d",
+      "id":"1b91cbc5.451fb4",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decicion apertura",
       "property":"payload",
       "propertyType":"msg",
@@ -3681,17 +3681,17 @@
       "y":2420,
       "wires":[
          [
-            "1bc61183.81198e"
+            "24fd83de.0e419c"
          ],
          [
-            "5df485c4.d7737c"
+            "b12bc91c.de11a8"
          ]
       ]
    },
    {
-      "id":"1bc61183.81198e",
+      "id":"24fd83de.0e419c",
       "type":"change",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Habilitado",
       "rules":[
          {
@@ -3711,14 +3711,14 @@
       "y":2380,
       "wires":[
          [
-            "b4c80a05.4c4218"
+            "6680791a.f7e218"
          ]
       ]
    },
    {
-      "id":"5df485c4.d7737c",
+      "id":"b12bc91c.de11a8",
       "type":"change",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Deshabilitado",
       "rules":[
          {
@@ -3738,16 +3738,16 @@
       "y":2460,
       "wires":[
          [
-            "44002e05.21326"
+            "4f5179b5.bfa1e8"
          ]
       ]
    },
    {
-      "id":"44002e05.21326",
+      "id":"4f5179b5.bfa1e8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"TMP adecuada",
-      "func":"let array = global.get(\"profesorEctGlobal0\");\nlet nombre = array.nombre;\nlet noEmpleado = array.noEmpleado;\nmsg.payload = \"{\\\"nombre\\\":\\\" \"+ nombre + \" \\\",\\\"id\\\":\\\"\"+ noEmpleado + \"\\\"}\" ;\nreturn msg;",
+      "func":"let array = global.get(\"profesorEctGlobal1\");\nlet nombre = array.nombre;\nlet noEmpleado = array.noEmpleado;\nmsg.payload = \"{\\\"nombre\\\":\\\" \"+ nombre + \" \\\",\\\"id\\\":\\\"\"+ noEmpleado + \"\\\"}\" ;\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -3759,16 +3759,16 @@
       "y":2460,
       "wires":[
          [
-            "abb48564.d49008"
+            "c4616674.72f278"
          ]
       ]
    },
    {
-      "id":"abb48564.d49008",
+      "id":"c4616674.72f278",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/DeshabilitadoTemperatura/Profesor/0",
+      "topic":"Gabanni/UAMazc/DeshabilitadoTemperatura/Profesor/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -3784,11 +3784,11 @@
       ]
    },
    {
-      "id":"7cb8d326.9b668c",
+      "id":"f9927ce5.4aba9",
       "type":"mqtt in",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/InfoDeshabilitadoTemperatura/Profesor/0",
+      "topic":"Gabanni/UAMazc/InfoDeshabilitadoTemperatura/Profesor/1",
       "qos":"2",
       "datatype":"auto",
       "broker":"9024296.b4fb6d8",
@@ -3798,14 +3798,14 @@
       "y":2920,
       "wires":[
          [
-            "81577cad.352b6"
+            "b57e1111.64ac7"
          ]
       ]
    },
    {
-      "id":"81577cad.352b6",
+      "id":"b57e1111.64ac7",
       "type":"json",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "property":"payload",
       "action":"",
@@ -3814,15 +3814,15 @@
       "y":2920,
       "wires":[
          [
-            "4fac1aaa.16e244",
-            "d269c283.d35a3"
+            "842cd738.dd1e08",
+            "6c3b54c.39d14ac"
          ]
       ]
    },
    {
-      "id":"5b60e74d.c30b38",
+      "id":"8b8ad18f.41a97",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"nombre",
       "func":"let profesor = msg.payload ;\nmsg.payload = profesor[0].nombre + \" \" + profesor[0].apellidos ;\nreturn msg;\n",
       "outputs":1,
@@ -3836,14 +3836,14 @@
       "y":2820,
       "wires":[
          [
-            "e96435eb.8fb758"
+            "f1f407ff.efb7e8"
          ]
       ]
    },
    {
-      "id":"fa5e2640.d94328",
+      "id":"9dcf7b46.d97988",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"noEmpleado",
       "func":"let profesor = msg.payload ;\nmsg.payload = profesor[0].noEmpleado ;\nreturn msg;",
       "outputs":1,
@@ -3857,14 +3857,14 @@
       "y":2860,
       "wires":[
          [
-            "df5cf132.49fbb"
+            "6946a8fa.296c58"
          ]
       ]
    },
    {
-      "id":"cf4258dd.2a5088",
+      "id":"b7e4c343.8ae05",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"temperatura",
       "func":"msg.payload = 0 ;\nreturn msg;\n\n",
       "outputs":1,
@@ -3878,14 +3878,14 @@
       "y":2900,
       "wires":[
          [
-            "586dbf8e.d28dc"
+            "9d33ba95.636628"
          ]
       ]
    },
    {
-      "id":"95bcd6ba.637b68",
+      "id":"246dbc1d.67b484",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar BD Entrada",
       "info":"Insertar en la BD de datos",
       "x":3230,
@@ -3895,11 +3895,11 @@
       ]
    },
    {
-      "id":"4611771e.89cc78",
+      "id":"8558562e.1d6918",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar en Entrada",
-      "func":"let profesor  = msg.payload;\nlet noEmpleado = profesor[0].noEmpleado ;\nlet nombre = profesor[0].nombre;\nlet apellidos = profesor[0].apellidos;\nlet clave = profesor[0].clave ;\nlet huella = profesor[0].huella ;\n\nlet temp = 0;\n\nlet area = global.get(\"UbicacionGlobal0\");\n\nmsg.topic = \"INSERT INTO registroentradaprofesoresypersonal (clave, huella, noEmpleado, nombre, apellidos, temperatura, area) VALUES ('\"+ clave +\"','\"+ huella +\"','\"+ noEmpleado +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;\n\n",
+      "func":"let profesor  = msg.payload;\nlet noEmpleado = profesor[0].noEmpleado ;\nlet nombre = profesor[0].nombre;\nlet apellidos = profesor[0].apellidos;\nlet clave = profesor[0].clave ;\nlet huella = profesor[0].huella ;\n\nlet temp = 0;\n\nlet area = global.get(\"UbicacionGlobal1\");\n\nmsg.topic = \"INSERT INTO registroentradaprofesoresypersonal (clave, huella, noEmpleado, nombre, apellidos, temperatura, area) VALUES ('\"+ clave +\"','\"+ huella +\"','\"+ noEmpleado +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -3911,14 +3911,14 @@
       "y":2980,
       "wires":[
          [
-            "94520c90.6b37c"
+            "1d362378.e9fdbd"
          ]
       ]
    },
    {
-      "id":"94520c90.6b37c",
+      "id":"1d362378.e9fdbd",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":3200,
@@ -3930,27 +3930,27 @@
       ]
    },
    {
-      "id":"8f4d5cba.8d4ef",
+      "id":"52a5d3b.839e52c",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":2760,
       "y":2980,
       "wires":[
          [
-            "4611771e.89cc78",
-            "a7bba277.89f17",
-            "a33e1ad4.a886d8"
+            "8558562e.1d6918",
+            "b3648d36.77786",
+            "370d6987.5ccf86"
          ]
       ]
    },
    {
-      "id":"4fac1aaa.16e244",
+      "id":"842cd738.dd1e08",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Variable global del profesor  ",
-      "func":"let profesor = msg.payload ;\nglobal.set(\"profesorDeshabilitadoGlobal0\",profesor);\n\nmsg.payload = global.get(\"profesorDeshabilitadoGlobal0\");\nreturn msg;\n\n",
+      "func":"let profesor = msg.payload ;\nglobal.set(\"profesorDeshabilitadoGlobal1\",profesor);\n\nmsg.payload = global.get(\"profesorDeshabilitadoGlobal1\");\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -3967,11 +3967,11 @@
       ]
    },
    {
-      "id":"dc17703a.10952",
+      "id":"274f794d.6c1856",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/AforoLleno/0",
+      "topic":"Gabanni/UAMazc/AforoLleno/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -3987,11 +3987,11 @@
       ]
    },
    {
-      "id":"d269c283.d35a3",
+      "id":"6c3b54c.39d14ac",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo",
-      "func":"let aforo = global.get(\"AforoGlobal0\");\naforo += 1 ;\nmsg.payload = aforo ;\nreturn msg;\n\n",
+      "func":"let aforo = global.get(\"AforoGlobal1\");\naforo += 1 ;\nmsg.payload = aforo ;\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4003,26 +4003,26 @@
       "y":2980,
       "wires":[
          [
-            "17925634.c234aa"
+            "a154a302.0faae"
          ]
       ]
    },
    {
-      "id":"17925634.c234aa",
+      "id":"a154a302.0faae",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decicion apertura aforo",
       "property":"payload",
       "propertyType":"msg",
       "rules":[
          {
             "t":"lte",
-            "v":"AforoPermitidoGlobal0",
+            "v":"AforoPermitidoGlobal1",
             "vt":"global"
          },
          {
             "t":"gt",
-            "v":"AforoPermitidoGlobal0",
+            "v":"AforoPermitidoGlobal1",
             "vt":"global"
          }
       ],
@@ -4033,21 +4033,21 @@
       "y":2980,
       "wires":[
          [
-            "4086c6dd.bc0e68",
-            "83b0bac1.0c7ad8",
-            "bd383806.af72d8",
-            "56a61210.2603dc",
-            "cf4258dd.2a5088"
+            "7c2cb744.28c988",
+            "31542776.e1c7b8",
+            "5a171f.b2f318e",
+            "748dbd33.d09cf4",
+            "b7e4c343.8ae05"
          ],
          [
-            "b374eced.6ac05"
+            "c0eccecf.3629f"
          ]
       ]
    },
    {
-      "id":"b374eced.6ac05",
+      "id":"c0eccecf.3629f",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aforo lleno",
       "func":"\nmsg.payload = \"{\\\"Mensaje\\\":\\\" Aforo lleno \\\"}\" ;\nreturn msg;",
       "outputs":1,
@@ -4061,14 +4061,14 @@
       "y":3040,
       "wires":[
          [
-            "dc17703a.10952"
+            "274f794d.6c1856"
          ]
       ]
    },
    {
-      "id":"94c7ac60.adc21",
+      "id":"2591f889.2db958",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Recibimos los datos de la lectura de temperatura",
       "info":"",
       "x":300,
@@ -4078,11 +4078,11 @@
       ]
    },
    {
-      "id":"43e024c9.630f4c",
+      "id":"5f7ae974.afe018",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar en Salida Historial",
-      "func":"let profesor = global.get(\"profesorEctGlobal0\");\nlet noEmpleado = profesor.noEmpleado ;\nlet nombre = profesor.nombre;\nlet apellidos = profesor.apellidos;\nlet clave = profesor.clave ;\nlet huella = profesor.huella ;\n\nlet area = global.get(\"UbicacionGlobal0\");\n\nmsg.topic = \"INSERT INTO registrosalidaprofesoresypersonalhistorial (clave, huella, noEmpleado, nombre, apellidos, area) VALUES ('\"+ clave +\"','\"+ huella +\"','\"+ noEmpleado +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ area +\"')\";\nreturn msg;\n\n",
+      "func":"let profesor = global.get(\"profesorEctGlobal1\");\nlet noEmpleado = profesor.noEmpleado ;\nlet nombre = profesor.nombre;\nlet apellidos = profesor.apellidos;\nlet clave = profesor.clave ;\nlet huella = profesor.huella ;\n\nlet area = global.get(\"UbicacionGlobal1\");\n\nmsg.topic = \"INSERT INTO registrosalidaprofesoresypersonalhistorial (clave, huella, noEmpleado, nombre, apellidos, area) VALUES ('\"+ clave +\"','\"+ huella +\"','\"+ noEmpleado +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ area +\"')\";\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4094,16 +4094,16 @@
       "y":2200,
       "wires":[
          [
-            "7aaddf70.05bea"
+            "f48d9314.cbac"
          ]
       ]
    },
    {
-      "id":"dfc31e11.ea375",
+      "id":"770b1e1c.4959e",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar en Entrada Historial",
-      "func":"let profesor  = msg.payload;\nlet noEmpleado = profesor[0].noEmpleado ;\nlet nombre = profesor[0].nombre;\nlet apellidos = profesor[0].apellidos;\nlet clave = profesor[0].clave ;\nlet huella = profesor[0].huella ;\n\nlet array = global.get(\"profesorGlobal0\");\nlet temp = array.temperatura;\n\nlet area = global.get(\"UbicacionGlobal0\");\n\nmsg.topic = \"INSERT INTO registroentradaprofesoresypersonalhistorial (clave, huella, noEmpleado, nombre, apellidos, temperatura, area) VALUES ('\"+ clave +\"','\"+ huella +\"','\"+ noEmpleado +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;\n\n",
+      "func":"let profesor  = msg.payload;\nlet noEmpleado = profesor[0].noEmpleado ;\nlet nombre = profesor[0].nombre;\nlet apellidos = profesor[0].apellidos;\nlet clave = profesor[0].clave ;\nlet huella = profesor[0].huella ;\n\nlet array = global.get(\"profesorGlobal1\");\nlet temp = array.temperatura;\n\nlet area = global.get(\"UbicacionGlobal1\");\n\nmsg.topic = \"INSERT INTO registroentradaprofesoresypersonalhistorial (clave, huella, noEmpleado, nombre, apellidos, temperatura, area) VALUES ('\"+ clave +\"','\"+ huella +\"','\"+ noEmpleado +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4115,16 +4115,16 @@
       "y":2740,
       "wires":[
          [
-            "da2dd452.b6fa98"
+            "3ffc8e4.df73a72"
          ]
       ]
    },
    {
-      "id":"a7bba277.89f17",
+      "id":"b3648d36.77786",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar en Entrada",
-      "func":"let profesor  = msg.payload;\nlet noEmpleado = profesor[0].noEmpleado ;\nlet nombre = profesor[0].nombre;\nlet apellidos = profesor[0].apellidos;\nlet clave = profesor[0].clave ;\nlet huella = profesor[0].huella ;\n\n\nlet temp = 0;\n\nlet area = global.get(\"UbicacionGlobal0\");\n\nmsg.topic = \"INSERT INTO registroentradaprofesoresypersonalhistorial (clave, huella, noEmpleado, nombre, apellidos, temperatura, area) VALUES ('\"+ clave +\"','\"+ huella +\"','\"+ noEmpleado +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;\n\n",
+      "func":"let profesor  = msg.payload;\nlet noEmpleado = profesor[0].noEmpleado ;\nlet nombre = profesor[0].nombre;\nlet apellidos = profesor[0].apellidos;\nlet clave = profesor[0].clave ;\nlet huella = profesor[0].huella ;\n\n\nlet temp = 0;\n\nlet area = global.get(\"UbicacionGlobal1\");\n\nmsg.topic = \"INSERT INTO registroentradaprofesoresypersonalhistorial (clave, huella, noEmpleado, nombre, apellidos, temperatura, area) VALUES ('\"+ clave +\"','\"+ huella +\"','\"+ noEmpleado +\"','\"+ nombre +\"','\"+ apellidos +\"','\"+ temp +\"','\"+ area +\"')\";\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4136,14 +4136,14 @@
       "y":3020,
       "wires":[
          [
-            "94520c90.6b37c"
+            "1d362378.e9fdbd"
          ]
       ]
    },
    {
-      "id":"d568035a.4b9e5",
+      "id":"2989f1dc.a277de",
       "type":"comment",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Aqui",
       "info":"",
       "x":1110,
@@ -4153,9 +4153,9 @@
       ]
    },
    {
-      "id":"9fd151da.65c2",
+      "id":"24ba057d.89afca",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decision ",
       "property":"payload",
       "propertyType":"msg",
@@ -4178,21 +4178,21 @@
       "y":2220,
       "wires":[
          [
-            "7f78be95.4a3ca",
-            "59cdd687.f3a208",
-            "50a59a0.d305768"
+            "34798daa.afeb52",
+            "ac61ae9d.7b151",
+            "9c016579.3b08c8"
          ],
          [
-            "3c0f3197.6d530e"
+            "224199f5.873d66"
          ]
       ]
    },
    {
-      "id":"86b16998.898b58",
+      "id":"b7c70b76.322b78",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Encontrado",
-      "func":"let estado = msg.payload ;\nlet profesor = global.get(\"profesorEctGlobal0\");\nif (profesor.noEmpleado  == estado.noEmpleado ){\n    msg.payload = \"Igual\"; \n    return msg;\n}else {\n    msg.payload = \"NoIgual\"; \n    return msg;\n}\n\n\n",
+      "func":"let estado = msg.payload ;\nlet profesor = global.get(\"profesorEctGlobal1\");\nif (profesor.noEmpleado  == estado.noEmpleado ){\n    msg.payload = \"Igual\"; \n    return msg;\n}else {\n    msg.payload = \"NoIgual\"; \n    return msg;\n}\n\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4204,16 +4204,16 @@
       "y":2220,
       "wires":[
          [
-            "9fd151da.65c2"
+            "24ba057d.89afca"
          ]
       ]
    },
    {
-      "id":"793f7ac1.455ca4",
+      "id":"7c6c8dde.a727f4",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Profesor o Administrador saliendo",
-      "func":"let profesor = global.get(\"profesorEctGlobal0\");\nlet nombre = profesor.nombre;\nmsg.payload = \"{\\\"nombre\\\":\\\" \"+ nombre + \" \\\"}\" ;\nreturn msg;",
+      "func":"let profesor = global.get(\"profesorEctGlobal1\");\nlet nombre = profesor.nombre;\nmsg.payload = \"{\\\"nombre\\\":\\\" \"+ nombre + \" \\\"}\" ;\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4225,16 +4225,16 @@
       "y":2240,
       "wires":[
          [
-            "11baf3dd.5783bc"
+            "1f21995.b203c67"
          ]
       ]
    },
    {
-      "id":"11baf3dd.5783bc",
+      "id":"1f21995.b203c67",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/Despedida/0",
+      "topic":"Gabanni/UAMazc/Despedida/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -4250,25 +4250,25 @@
       ]
    },
    {
-      "id":"13d724f7.915c2b",
+      "id":"baa0c3.ec939f4",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":860,
       "y":3180,
       "wires":[
          [
-            "39a6a981.746d46"
+            "a4f3c51d.8bd348"
          ]
       ]
    },
    {
-      "id":"2389b244.a53efe",
+      "id":"b223ec47.205a1",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Obtengo informacion del profesor",
-      "func":"let array = global.get(\"profesorGlobal0\");\nlet noEmpleado = array.noEmpleado\nmsg.topic = \"SELECT * FROM profesoresypersonal where noEmpleado = '\" + noEmpleado + \"'\";\nreturn msg;",
+      "func":"let array = global.get(\"profesorGlobal1\");\nlet noEmpleado = array.noEmpleado\nmsg.topic = \"SELECT * FROM profesoresypersonal where noEmpleado = '\" + noEmpleado + \"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4280,16 +4280,16 @@
       "y":3180,
       "wires":[
          [
-            "13d724f7.915c2b"
+            "baa0c3.ec939f4"
          ]
       ]
    },
    {
-      "id":"fff1e19f.5eec3",
+      "id":"13654944.e553f7",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Variable global de Usuario",
-      "func":"let profesor = msg.payload ;\nglobal.set(\"profesorGlobal0\",profesor);\nmsg.payload = global.get(\"profesorGlobal0\");\nreturn msg;\n\n",
+      "func":"let profesor = msg.payload ;\nglobal.set(\"profesorGlobal1\",profesor);\nmsg.payload = global.get(\"profesorGlobal1\");\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4306,11 +4306,11 @@
       ]
    },
    {
-      "id":"6fe1bd67.c31fb4",
+      "id":"656a9788.f359b8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Obtengo informacion del profesor",
-      "func":"let array = global.get(\"profesorGlobal0\");\nlet noEmpleado = array.noEmpleado\nmsg.topic = \"SELECT * FROM profesoresypersonal where noEmpleado = '\" + noEmpleado + \"'\";\nreturn msg;",
+      "func":"let array = global.get(\"profesorGlobal1\");\nlet noEmpleado = array.noEmpleado\nmsg.topic = \"SELECT * FROM profesoresypersonal where noEmpleado = '\" + noEmpleado + \"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4322,31 +4322,31 @@
       "y":2600,
       "wires":[
          [
-            "9abcb615.be8938"
+            "3823cec.1830332"
          ]
       ]
    },
    {
-      "id":"9abcb615.be8938",
+      "id":"3823cec.1830332",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":1760,
       "y":2600,
       "wires":[
          [
-            "af2c4b82.213728",
-            "47f4ee6f.c0e4b"
+            "e47bfc7e.efdc",
+            "b19ef279.9622"
          ]
       ]
    },
    {
-      "id":"5c43be2.2ccff4",
+      "id":"d431a165.de414",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Obtengo informacion del profesor",
-      "func":"let array = global.get(\"profesorGlobal0\");\nlet noEmpleado = array.noEmpleado\nmsg.topic = \"SELECT * FROM profesoresypersonal where noEmpleado = '\" + noEmpleado + \"'\";\nreturn msg;",
+      "func":"let array = global.get(\"profesorGlobal1\");\nlet noEmpleado = array.noEmpleado\nmsg.topic = \"SELECT * FROM profesoresypersonal where noEmpleado = '\" + noEmpleado + \"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4358,15 +4358,15 @@
       "y":2700,
       "wires":[
          [
-            "9fa31283.e5bdb"
+            "489a8e12.dcd18"
          ]
       ]
    },
    {
-      "id":"586dbf8e.d28dc",
+      "id":"9d33ba95.636628",
       "type":"ui_text",
-      "z":"f7ff6536.244cc8",
-      "group":"fd3ea40d.6a26c8",
+      "z":"fa10062b.bcdec8",
+      "group":"378ceaaa.0b7336",
       "order":10,
       "width":0,
       "height":0,
@@ -4381,11 +4381,11 @@
       ]
    },
    {
-      "id":"a765c1f5.f170f",
+      "id":"5596e839.d417e8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar en Laboratorios y Aulas",
-      "func":"let profesor  = msg.payload;\nlet noEmpleado = profesor[0].noEmpleado ;\nlet nombrePro = profesor[0].nombre + \" \"  + profesor[0].apellidos;\nlet pA = \"true\"\n\nlet ubi = global.get(\"UbicacionGlobal0\");\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET profesorAdentro  = '\" + pA +\"' , noEmpleado = '\"+ noEmpleado +\"', nombrePro = '\" + nombrePro + \"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;\n\n",
+      "func":"let profesor  = msg.payload;\nlet noEmpleado = profesor[0].noEmpleado ;\nlet nombrePro = profesor[0].nombre + \" \"  + profesor[0].apellidos;\nlet pA = \"true\"\n\nlet ubi = global.get(\"UbicacionGlobal1\");\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET profesorAdentro  = '\" + pA +\"' , noEmpleado = '\"+ noEmpleado +\"', nombrePro = '\" + nombrePro + \"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4397,14 +4397,14 @@
       "y":2780,
       "wires":[
          [
-            "5e53722.1ffdb8c"
+            "d257473.70a17b8"
          ]
       ]
    },
    {
-      "id":"899d5aed.a11918",
+      "id":"88684a82.129088",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Vaciar campos",
       "func":"\nmsg.payload = \" \" ;\nreturn msg;",
       "outputs":1,
@@ -4418,18 +4418,18 @@
       "y":2180,
       "wires":[
          [
-            "e96435eb.8fb758",
-            "586dbf8e.d28dc",
-            "df5cf132.49fbb"
+            "f1f407ff.efb7e8",
+            "9d33ba95.636628",
+            "6946a8fa.296c58"
          ]
       ]
    },
    {
-      "id":"4086c6dd.bc0e68",
+      "id":"7c2cb744.28c988",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Obtengo informacion del profesor",
-      "func":"let profesor = global.get(\"profesorDeshabilitadoGlobal0\");\nlet noEmpleado = profesor.noEmpleado ;\nmsg.topic = \"SELECT * FROM profesoresypersonal where noEmpleado = '\" + noEmpleado + \"'\";\nreturn msg;",
+      "func":"let profesor = global.get(\"profesorDeshabilitadoGlobal1\");\nlet noEmpleado = profesor.noEmpleado ;\nmsg.topic = \"SELECT * FROM profesoresypersonal where noEmpleado = '\" + noEmpleado + \"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4441,16 +4441,16 @@
       "y":2980,
       "wires":[
          [
-            "8f4d5cba.8d4ef"
+            "52a5d3b.839e52c"
          ]
       ]
    },
    {
-      "id":"a33e1ad4.a886d8",
+      "id":"370d6987.5ccf86",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar en Laboratorios y Aulas",
-      "func":"let profesor  = msg.payload;\nlet noEmpleado = profesor[0].noEmpleado ;\nlet nombrePro = profesor[0].nombre + \" \"  + profesor[0].apellidos;\nlet pA = \"true\"\n\nlet ubi = global.get(\"UbicacionGlobal0\");\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET profesorAdentro  = '\" + pA +\"' , noEmpleado = '\"+ noEmpleado +\"', nombrePro = '\" + nombrePro + \"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;\n\n",
+      "func":"let profesor  = msg.payload;\nlet noEmpleado = profesor[0].noEmpleado ;\nlet nombrePro = profesor[0].nombre + \" \"  + profesor[0].apellidos;\nlet pA = \"true\"\n\nlet ubi = global.get(\"UbicacionGlobal1\");\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET profesorAdentro  = '\" + pA +\"' , noEmpleado = '\"+ noEmpleado +\"', nombrePro = '\" + nombrePro + \"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4462,16 +4462,16 @@
       "y":3060,
       "wires":[
          [
-            "a78bd089.44e6"
+            "ce9aaa40.5173e8"
          ]
       ]
    },
    {
-      "id":"4439f94f.be6f68",
+      "id":"d1b0d535.50abf8",
       "type":"mqtt in",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/compararteclado/Profesor/0",
+      "topic":"Gabanni/UAMazc/compararteclado/Profesor/1",
       "qos":"2",
       "datatype":"auto",
       "broker":"9024296.b4fb6d8",
@@ -4481,14 +4481,14 @@
       "y":2100,
       "wires":[
          [
-            "23649b89.a2b264"
+            "745ea326.527b4c"
          ]
       ]
    },
    {
-      "id":"23649b89.a2b264",
+      "id":"745ea326.527b4c",
       "type":"json",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "property":"payload",
       "action":"",
@@ -4497,15 +4497,15 @@
       "y":2160,
       "wires":[
          [
-            "c09c454f.c18c08",
-            "62a429e9.a90958"
+            "fe034cb7.dccd4",
+            "f10e3bc2.1702a8"
          ]
       ]
    },
    {
-      "id":"c09c454f.c18c08",
+      "id":"fe034cb7.dccd4",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"busqueda profesor o administrativo",
       "func":"msg.topic = \"SELECT * FROM profesoresypersonal WHERE clave = '\" + msg.payload.codigo + \"'\";\nreturn msg;",
       "outputs":1,
@@ -4519,16 +4519,16 @@
       "y":2160,
       "wires":[
          [
-            "cd669a10.2f19e8"
+            "35d7ba8d.f24c86"
          ]
       ]
    },
    {
-      "id":"83b0bac1.0c7ad8",
+      "id":"31542776.e1c7b8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Obtengo informacion del profesor",
-      "func":"let array = global.get(\"profesorDeshabilitadoGlobal0\");\nlet noEmpleado = array.noEmpleado\nmsg.topic = \"SELECT * FROM profesoresypersonal where noEmpleado = '\" + noEmpleado + \"'\";\nreturn msg;",
+      "func":"let array = global.get(\"profesorDeshabilitadoGlobal1\");\nlet noEmpleado = array.noEmpleado\nmsg.topic = \"SELECT * FROM profesoresypersonal where noEmpleado = '\" + noEmpleado + \"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4540,31 +4540,31 @@
       "y":2860,
       "wires":[
          [
-            "330286e1.29af2a"
+            "9455f4b6.719ba8"
          ]
       ]
    },
    {
-      "id":"330286e1.29af2a",
+      "id":"9455f4b6.719ba8",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":2640,
       "y":2860,
       "wires":[
          [
-            "5b60e74d.c30b38",
-            "fa5e2640.d94328"
+            "8b8ad18f.41a97",
+            "9dcf7b46.d97988"
          ]
       ]
    },
    {
-      "id":"cadc24f5.11a4d8",
+      "id":"764613a7.18df6c",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Encontrado",
-      "func":"let RFID = msg.payload.RFID ;\nglobal.set(\"RFIDGlobal0\",RFID);\nlet ubi = global.get(\"UbicacionGlobal0\");\nmsg.topic = \"SELECT * FROM laboratoriosyaulas where nombre = '\"+ ubi +\"'\";\nreturn msg;",
+      "func":"let RFID = msg.payload.RFID ;\nglobal.set(\"RFIDGlobal1\",RFID);\nlet ubi = global.get(\"UbicacionGlobal1\");\nmsg.topic = \"SELECT * FROM laboratoriosyaulas where nombre = '\"+ ubi +\"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4576,30 +4576,30 @@
       "y":440,
       "wires":[
          [
-            "d523305a.26b9f"
+            "49b0bf57.fca1e"
          ]
       ]
    },
    {
-      "id":"d523305a.26b9f",
+      "id":"49b0bf57.fca1e",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":500,
       "y":440,
       "wires":[
          [
-            "5d754a85.b72e74"
+            "910b195e.6a4968"
          ]
       ]
    },
    {
-      "id":"5d754a85.b72e74",
+      "id":"910b195e.6a4968",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"busqueda profesor (registroentradaalumnos)",
-      "func":"let array = msg.payload;\nif (array[0].profesorAdentro == \"false\" ){\n    msg.payload = \"Desocupado\"; \n    return msg;\n}else {\n    global.set(\"EstadoGlobal0\",array[0]);\n    msg.payload = global.get(\"EstadoGlobal0\");\n    return msg;\n}\n",
+      "func":"let array = msg.payload;\nif (array[0].profesorAdentro == \"false\" ){\n    msg.payload = \"Desocupado\"; \n    return msg;\n}else {\n    global.set(\"EstadoGlobal1\",array[0]);\n    msg.payload = global.get(\"EstadoGlobal1\");\n    return msg;\n}\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4611,14 +4611,14 @@
       "y":440,
       "wires":[
          [
-            "fcd0d0e9.110b4"
+            "9cfef688.ed7af8"
          ]
       ]
    },
    {
-      "id":"fcd0d0e9.110b4",
+      "id":"9cfef688.ed7af8",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decision ",
       "property":"payload",
       "propertyType":"msg",
@@ -4641,17 +4641,17 @@
       "y":500,
       "wires":[
          [
-            "b579db08.d72a18"
+            "cbc1a34f.81e2d"
          ],
          [
-            "c3127e39.b0099"
+            "cb8c15fc.eba9d8"
          ]
       ]
    },
    {
-      "id":"237b4f06.998fb",
+      "id":"a929634a.0feb2",
       "type":"json",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "property":"payload",
       "action":"",
@@ -4660,14 +4660,14 @@
       "y":440,
       "wires":[
          [
-            "cadc24f5.11a4d8"
+            "764613a7.18df6c"
          ]
       ]
    },
    {
-      "id":"c3127e39.b0099",
+      "id":"cb8c15fc.eba9d8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Alumno saliendo",
       "func":"let nombre = msg.payload.nombre;\nmsg.payload = \"{\\\"nombre\\\":\\\" \"+ nombre + \" \\\"}\" ;\nreturn msg;",
       "outputs":1,
@@ -4681,16 +4681,16 @@
       "y":500,
       "wires":[
          [
-            "4ca1cb5a.4472f4"
+            "2095e085.40b8c"
          ]
       ]
    },
    {
-      "id":"4ca1cb5a.4472f4",
+      "id":"2095e085.40b8c",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/SinAcceso/0",
+      "topic":"Gabanni/UAMazc/SinAcceso/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -4706,11 +4706,11 @@
       ]
    },
    {
-      "id":"1db9a524.f6f56b",
+      "id":"cdbabe4d.78c2a",
       "type":"mqtt out",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/Apertura/0",
+      "topic":"Gabanni/UAMazc/Apertura/1",
       "qos":"",
       "retain":"",
       "respTopic":"",
@@ -4726,9 +4726,9 @@
       ]
    },
    {
-      "id":"56a61210.2603dc",
+      "id":"748dbd33.d09cf4",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"temperatura",
       "func":"let valor = true ;\nmsg.payload = valor ;\nreturn msg;\n\n",
       "outputs":1,
@@ -4742,16 +4742,16 @@
       "y":2820,
       "wires":[
          [
-            "1db9a524.f6f56b"
+            "cdbabe4d.78c2a"
          ]
       ]
    },
    {
-      "id":"a9bebfc5.989c2",
+      "id":"704abd93.8b7a14",
       "type":"mqtt in",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
-      "topic":"Gabanni/UAMazc/EstadoPuerta/0",
+      "topic":"Gabanni/UAMazc/EstadoPuerta/1",
       "qos":"2",
       "datatype":"auto",
       "broker":"9024296.b4fb6d8",
@@ -4761,14 +4761,14 @@
       "y":3320,
       "wires":[
          [
-            "74a2e717.ffc808"
+            "ed2d95d3.e80078"
          ]
       ]
    },
    {
-      "id":"74a2e717.ffc808",
+      "id":"ed2d95d3.e80078",
       "type":"json",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "property":"payload",
       "action":"",
@@ -4777,16 +4777,16 @@
       "y":3320,
       "wires":[
          [
-            "abdfe2ed.dbc97"
+            "2daa1362.6d413c"
          ]
       ]
    },
    {
-      "id":"abdfe2ed.dbc97",
+      "id":"2daa1362.6d413c",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Variable global de Estado de la Puerta",
-      "func":"let estado = msg.payload.estado ;\nglobal.set(\"estadoGlobal0\",estado);\nmsg.payload = global.get(\"estadoGlobal0\");\nreturn msg;\n\n",
+      "func":"let estado = msg.payload.estado ;\nglobal.set(\"estadoGlobal1\",estado);\nmsg.payload = global.get(\"estadoGlobal1\");\nreturn msg;\n\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4798,19 +4798,19 @@
       "y":3320,
       "wires":[
          [
-            "fb3b2c48.91511",
-            "5e10cd0.8f71934",
-            "8b88e635.7ec968",
-            "2cbab7d5.f84bd8"
+            "83e8f887.5a53f8",
+            "f9174549.0a4808",
+            "11c6e171.900d4f",
+            "3083446b.946bdc"
          ]
       ]
    },
    {
-      "id":"fb3b2c48.91511",
+      "id":"83e8f887.5a53f8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar Estado de la Puerta",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nlet estado = global.get(\"estadoGlobal0\");\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET estadoPuerta  = '\" + estado +\"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nlet estado = global.get(\"estadoGlobal1\");\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET estadoPuerta  = '\" + estado +\"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4822,14 +4822,14 @@
       "y":3320,
       "wires":[
          [
-            "933beb88.2adee8"
+            "636e719a.f62c8"
          ]
       ]
    },
    {
-      "id":"933beb88.2adee8",
+      "id":"636e719a.f62c8",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":1180,
@@ -4841,10 +4841,10 @@
       ]
    },
    {
-      "id":"f1107f32.30093",
+      "id":"3ef8b5bd.bda13a",
       "type":"ui_text",
-      "z":"f7ff6536.244cc8",
-      "group":"fd3ea40d.6a26c8",
+      "z":"fa10062b.bcdec8",
+      "group":"378ceaaa.0b7336",
       "order":10,
       "width":0,
       "height":0,
@@ -4859,11 +4859,11 @@
       ]
    },
    {
-      "id":"5e10cd0.8f71934",
+      "id":"f9174549.0a4808",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Mesnaje TMP opcinal",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nlet estado = global.get(\"estadoGlobal0\");\nif ( estado == \"abierto\"){\n    msg.payload = \"Puerta Abierta\" ;\n}else{\n    msg.payload = \"Puerta Cerrada\";\n}\nmsg.topic = \"Edo.Puerta ( \" + ubi + \")\";\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nlet estado = global.get(\"estadoGlobal1\");\nif ( estado == \"abierto\"){\n    msg.payload = \"Puerta Abierta\" ;\n}else{\n    msg.payload = \"Puerta Cerrada\";\n}\nmsg.topic = \"Edo.Puerta ( \" + ubi + \")\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4875,14 +4875,14 @@
       "y":3420,
       "wires":[
          [
-            "b6296c85.faa09"
+            "2b6fd7d9.d519e8"
          ]
       ]
    },
    {
-      "id":"b6296c85.faa09",
+      "id":"2b6fd7d9.d519e8",
       "type":"ui_toast",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "position":"top right",
       "displayTime":"3",
       "highlight":"",
@@ -4900,9 +4900,9 @@
       ]
    },
    {
-      "id":"e518b8ad.bbe998",
+      "id":"f0b03bb.d8e52c8",
       "type":"telegram receiver",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Gabanni",
       "bot":"b1e85f2c.05544",
       "saveDataDir":"",
@@ -4911,7 +4911,7 @@
       "y":3420,
       "wires":[
          [
-            "3fee2cda.7fb474"
+            "2a34e4e.8c6ce1c"
          ],
          [
             
@@ -4919,9 +4919,9 @@
       ]
    },
    {
-      "id":"3fee2cda.7fb474",
+      "id":"2a34e4e.8c6ce1c",
       "type":"debug",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "active":true,
       "tosidebar":true,
@@ -4937,9 +4937,9 @@
       ]
    },
    {
-      "id":"bb16ecc4.05149",
+      "id":"5f3da11.b12e86",
       "type":"telegram sender",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"MSG Abierto/Cerrado ",
       "bot":"b1e85f2c.05544",
       "haserroroutput":false,
@@ -4953,11 +4953,11 @@
       ]
    },
    {
-      "id":"3a7c497d.cf1a16",
+      "id":"4bf6089a.0148c8",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Estado de la puerta",
-      "func":"let estado = global.get(\"estadoGlobal0\");\nmsg.payload = estado ;\nreturn msg;",
+      "func":"let estado = global.get(\"estadoGlobal1\");\nmsg.payload = estado ;\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -4969,14 +4969,14 @@
       "y":3520,
       "wires":[
          [
-            "747bf8f.5878508"
+            "101f1da2.999c42"
          ]
       ]
    },
    {
-      "id":"4bf87395.d934ac",
+      "id":"1bcd9cac.7504c3",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Datos de profesor al cargar la cerradura (nombrePro)",
       "func":"let profesor = msg.payload ; \nmsg.payload = profesor[0].nombrePro ;\nreturn msg;",
       "outputs":1,
@@ -4990,14 +4990,14 @@
       "y":2160,
       "wires":[
          [
-            "e96435eb.8fb758"
+            "f1f407ff.efb7e8"
          ]
       ]
    },
    {
-      "id":"9c311fdb.ce0aa",
+      "id":"9ffef39f.eaa07",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Datos de profesor al cargar la cerradura (noEmpleado)",
       "func":"let profesor = msg.payload ; \nmsg.payload = profesor[0].noEmpleado;\nreturn msg;",
       "outputs":1,
@@ -5011,16 +5011,16 @@
       "y":2200,
       "wires":[
          [
-            "df5cf132.49fbb"
+            "6946a8fa.296c58"
          ]
       ]
    },
    {
-      "id":"ed514c75.4346a",
+      "id":"34975762.145d78",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Datos estado de la puerta al cargar la cerradura (Estado de la Puerta)",
-      "func":"let puerta = msg.payload ; \nlet estado = puerta[0].estadoPuerta;\nlet ubi = global.get(\"UbicacionGlobal0\");\nif ( estado == \"abierto\"){\n    msg.payload = \"Puerta Abierta\" ;\n}else{\n    msg.payload = \"Puerta Cerrada\";\n}\nmsg.topic = \"Edo.Puerta ( \" + ubi + \")\";\nreturn msg;\n",
+      "func":"let puerta = msg.payload ; \nlet estado = puerta[0].estadoPuerta;\nlet ubi = global.get(\"UbicacionGlobal1\");\nif ( estado == \"abierto\"){\n    msg.payload = \"Puerta Abierta\" ;\n}else{\n    msg.payload = \"Puerta Cerrada\";\n}\nmsg.topic = \"Edo.Puerta ( \" + ubi + \")\";\nreturn msg;\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -5032,16 +5032,16 @@
       "y":3260,
       "wires":[
          [
-            "b6296c85.faa09"
+            "2b6fd7d9.d519e8"
          ]
       ]
    },
    {
-      "id":"8e679dfe.81861",
+      "id":"73b1bfb2.3cec2",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Datos del mensaje",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nmsg.payload = {\n    \"chatId\": -628656105 , //Id de la persona\n    \"type\":\"message\" ,\n    \"content\" : \"Cerradura activada en \" + ubi\n}\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nmsg.payload = {\n    \"chatId\": -628656105 , //Id de la persona\n    \"type\":\"message\" ,\n    \"content\" : \"Cerradura activada en \" + ubi\n}\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -5053,14 +5053,14 @@
       "y":80,
       "wires":[
          [
-            "4e0fa25b.24752c"
+            "b37a1fe9.062f4"
          ]
       ]
    },
    {
-      "id":"4e0fa25b.24752c",
+      "id":"b37a1fe9.062f4",
       "type":"telegram sender",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "bot":"b1e85f2c.05544",
       "haserroroutput":false,
@@ -5074,9 +5074,9 @@
       ]
    },
    {
-      "id":"747bf8f.5878508",
+      "id":"101f1da2.999c42",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Abierto/Cerrado",
       "property":"payload",
       "propertyType":"msg",
@@ -5099,19 +5099,19 @@
       "y":3520,
       "wires":[
          [
-            "74af09c.fe48df8"
+            "f24e86a2.655c28"
          ],
          [
-            "d683bdad.4761b"
+            "69477ca.84a7384"
          ]
       ]
    },
    {
-      "id":"74af09c.fe48df8",
+      "id":"f24e86a2.655c28",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Datos del mensaje",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nlet estado = msg.payload ;\nmsg.payload = {\n    \"chatId\": -628656105 , //Id de la persona\n    \"type\":\"message\" ,\n    \"content\" : \"Puerta abierta en \" + ubi\n}\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nlet estado = msg.payload ;\nmsg.payload = {\n    \"chatId\": -628656105 , //Id de la persona\n    \"type\":\"message\" ,\n    \"content\" : \"Puerta abierta en \" + ubi\n}\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -5123,16 +5123,16 @@
       "y":3480,
       "wires":[
          [
-            "bb16ecc4.05149"
+            "5f3da11.b12e86"
          ]
       ]
    },
    {
-      "id":"d683bdad.4761b",
+      "id":"69477ca.84a7384",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Datos del mensaje",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nlet estado = msg.payload ;\nmsg.payload = {\n    \"chatId\": -628656105 , //Id de la persona\n    \"type\":\"message\" ,\n    \"content\" : \"Puerta cerrada en \" + ubi\n}\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nlet estado = msg.payload ;\nmsg.payload = {\n    \"chatId\": -628656105 , //Id de la persona\n    \"type\":\"message\" ,\n    \"content\" : \"Puerta cerrada en \" + ubi\n}\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -5144,14 +5144,14 @@
       "y":3560,
       "wires":[
          [
-            "bb16ecc4.05149"
+            "5f3da11.b12e86"
          ]
       ]
    },
    {
-      "id":"54ab510b.703e8",
+      "id":"ada0ccb3.46ee9",
       "type":"telegram sender",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"MSG Abierto/Cerrado ",
       "bot":"b1e85f2c.05544",
       "haserroroutput":false,
@@ -5165,9 +5165,9 @@
       ]
    },
    {
-      "id":"4bbe22dd.2f4d1c",
+      "id":"7cda1fb0.6108a",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Datos del mensaje",
       "func":"let info = msg.payload ;\nlet ubi =  info[0].nombre ;\nlet aforoP =  info[0].aforoPermitido ;\nlet tmp =  info[0].LecturaTemperatura;\nlet profesor =  info[0].nombrePro;\n\n\nif(tmp == \"true\"){\n    tmp = \"Habilitado\";\n}else{\n     tmp = \"Deshabilitado\";\n}\n\nmsg.payload = {\n    \"chatId\": -628656105 , //Id de la persona\n    \"type\":\"message\" ,\n    \"content\" : \"INGRESO\" \n    + \"\\n  Ubicacion : \"+ubi+\" \"\n    + \"\\n  Aforo Permitido : \"+aforoP+\" \"\n    + \"\\n  Lectura de Temperatura : \"+tmp+\" \"\n    + \"\\n  Nombre : \"+ profesor +\" \"\n}\nreturn msg;",
       "outputs":1,
@@ -5181,16 +5181,16 @@
       "y":3240,
       "wires":[
          [
-            "54ab510b.703e8"
+            "ada0ccb3.46ee9"
          ]
       ]
    },
    {
-      "id":"3f583cff.925114",
+      "id":"745a214a.ccdbc",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Obtengo informacion del Lab",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nmsg.payload = ubi;\nmsg.topic = \"SELECT * FROM laboratoriosyaulas where nombre = '\" + ubi + \"'\";\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nmsg.payload = ubi;\nmsg.topic = \"SELECT * FROM laboratoriosyaulas where nombre = '\" + ubi + \"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -5202,44 +5202,44 @@
       "y":3140,
       "wires":[
          [
-            "dca5a550.aa5c68"
+            "9ad0fb25.06b238"
          ]
       ]
    },
    {
-      "id":"dca5a550.aa5c68",
+      "id":"9ad0fb25.06b238",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":3500,
       "y":3180,
       "wires":[
          [
-            "4bbe22dd.2f4d1c"
+            "7cda1fb0.6108a"
          ]
       ]
    },
    {
-      "id":"a78bd089.44e6",
+      "id":"ce9aaa40.5173e8",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":3220,
       "y":3060,
       "wires":[
          [
-            "259e762.d58ed8a"
+            "eb5ff37.8875a1"
          ]
       ]
    },
    {
-      "id":"6587d23d.edacdc",
+      "id":"629cb46e.4b017c",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Obtengo informacion del Lab",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nmsg.payload = ubi;\nmsg.topic = \"SELECT * FROM laboratoriosyaulas where nombre = '\" + ubi + \"'\";\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nmsg.payload = ubi;\nmsg.topic = \"SELECT * FROM laboratoriosyaulas where nombre = '\" + ubi + \"'\";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -5251,28 +5251,28 @@
       "y":2060,
       "wires":[
          [
-            "330ed1e2.d255be"
+            "19459b6b.6e6115"
          ]
       ]
    },
    {
-      "id":"330ed1e2.d255be",
+      "id":"19459b6b.6e6115",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":1940,
       "y":2000,
       "wires":[
          [
-            "ea963f78.53999"
+            "245246bf.f2565a"
          ]
       ]
    },
    {
-      "id":"ea963f78.53999",
+      "id":"245246bf.f2565a",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Datos del mensaje",
       "func":"let info = msg.payload ;\nlet ubi =  info[0].nombre ;\nlet aforoP =  info[0].aforoPermitido ;\nlet tmp =  info[0].LecturaTemperatura;\nlet profesor =  info[0].nombrePro;\n\nif(tmp == \"true\"){\n    tmp = \"Habilitado\";\n}else{\n     tmp = \"Deshabilitado\";\n}\n\nmsg.payload = {\n    \"chatId\": -628656105 , //Id de la persona\n    \"type\":\"message\" ,\n    \"content\" : \"SALIDA\" \n    + \"\\n  Ubicacion : \"+ubi+\" \"\n    + \"\\n  Nombre : \"+profesor+\" \"\n}\nreturn msg;",
       "outputs":1,
@@ -5286,14 +5286,14 @@
       "y":2000,
       "wires":[
          [
-            "50603b14.a112b4"
+            "96e4d958.4f4f28"
          ]
       ]
    },
    {
-      "id":"50603b14.a112b4",
+      "id":"96e4d958.4f4f28",
       "type":"telegram sender",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"MSG Abierto/Cerrado ",
       "bot":"b1e85f2c.05544",
       "haserroroutput":false,
@@ -5307,13 +5307,13 @@
       ]
    },
    {
-      "id":"5ec631c9.020b6",
+      "id":"80b2b664.882f28",
       "type":"ui_switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "label":"Notificaciones",
       "tooltip":"",
-      "group":"829fea5b.a88bf8",
+      "group":"2c8bf412.27520c",
       "order":6,
       "width":0,
       "height":0,
@@ -5335,17 +5335,17 @@
       "y":460,
       "wires":[
          [
-            "e0b5bddc.46aac",
-            "a8372bdc.1e3d68"
+            "b32563b.bd31aa",
+            "2dae9eee.3fb742"
          ]
       ]
    },
    {
-      "id":"e0b5bddc.46aac",
+      "id":"b32563b.bd31aa",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Insertar Opcion Temperatura",
-      "func":"let ubi = global.get(\"UbicacionGlobal0\");\nlet op = msg.payload;\n\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET notificaciones = '\" + op +\"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;",
+      "func":"let ubi = global.get(\"UbicacionGlobal1\");\nlet op = msg.payload;\n\n\nmsg.topic = \"UPDATE laboratoriosyaulas SET notificaciones = '\" + op +\"' WHERE nombre = '\" + ubi +\"' \";\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -5357,14 +5357,14 @@
       "y":460,
       "wires":[
          [
-            "1ed7f942.297ca7"
+            "d5d58abc.d488b8"
          ]
       ]
    },
    {
-      "id":"1ed7f942.297ca7",
+      "id":"d5d58abc.d488b8",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":2240,
@@ -5376,9 +5376,9 @@
       ]
    },
    {
-      "id":"cc93b466.168bd8",
+      "id":"1dfb2f87.1b3d5",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Opcion Notificaciones",
       "func":"let op = msg.payload[0].notificaciones;\nmsg.payload = op;\nlet num  = false ;\nif ( op == \"true\"){\n    num = true ;\n}else {\n    num = false ;\n}\nmsg.payload = num;\nmsg.topic = \"Notificaciones\";\nreturn msg;",
       "outputs":1,
@@ -5392,14 +5392,14 @@
       "y":380,
       "wires":[
          [
-            "5ec631c9.020b6"
+            "80b2b664.882f28"
          ]
       ]
    },
    {
-      "id":"f014fa44.b1a7e8",
+      "id":"47ad5d1f.bf8b04",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Mesnaje notificacion opcional",
       "func":"let temp = msg.payload ;\nif ( temp == 1){\n    msg.payload = \"Notificaciones habilitada\" ;\n}else{\n    msg.payload = \"Notificaciones deshabilitada\";\n}\n\nreturn msg;",
       "outputs":1,
@@ -5413,14 +5413,14 @@
       "y":560,
       "wires":[
          [
-            "b5c0c912.d971c8"
+            "1cb55c8e.a950f3"
          ]
       ]
    },
    {
-      "id":"b5c0c912.d971c8",
+      "id":"1cb55c8e.a950f3",
       "type":"ui_toast",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "position":"top right",
       "displayTime":"3",
       "highlight":"",
@@ -5438,11 +5438,11 @@
       ]
    },
    {
-      "id":"a8372bdc.1e3d68",
+      "id":"2dae9eee.3fb742",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Indicacion de notificacion opcional",
-      "func":"let temp = msg.payload ;\nglobal.set(\"NotificacionGlobal0\",temp);\nmsg.payload = global.get(\"NotificacionGlobal0\");\nreturn msg;",
+      "func":"let temp = msg.payload ;\nglobal.set(\"NotificacionGlobal1\",temp);\nmsg.payload = global.get(\"NotificacionGlobal1\");\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -5454,14 +5454,14 @@
       "y":500,
       "wires":[
          [
-            "f014fa44.b1a7e8"
+            "47ad5d1f.bf8b04"
          ]
       ]
    },
    {
-      "id":"393aac4a.6145f4",
+      "id":"8438c16a.c1fe5",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decicion notificacion",
       "property":"payload",
       "propertyType":"msg",
@@ -5480,7 +5480,7 @@
       "y":3560,
       "wires":[
          [
-            "3a7c497d.cf1a16"
+            "4bf6089a.0148c8"
          ],
          [
             
@@ -5488,11 +5488,11 @@
       ]
    },
    {
-      "id":"8b88e635.7ec968",
+      "id":"11c6e171.900d4f",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Notificaciones ? (habilitada o deshabilitada)",
-      "func":"msg.payload = global.get(\"NotificacionGlobal0\");\nreturn msg;\n",
+      "func":"msg.payload = global.get(\"NotificacionGlobal1\");\nreturn msg;\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -5504,16 +5504,16 @@
       "y":3500,
       "wires":[
          [
-            "393aac4a.6145f4"
+            "8438c16a.c1fe5"
          ]
       ]
    },
    {
-      "id":"259e762.d58ed8a",
+      "id":"eb5ff37.8875a1",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Notificaciones ? (habilitada o deshabilitada)",
-      "func":"msg.payload = global.get(\"NotificacionGlobal0\");\nreturn msg;\n",
+      "func":"msg.payload = global.get(\"NotificacionGlobal1\");\nreturn msg;\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -5525,14 +5525,14 @@
       "y":3060,
       "wires":[
          [
-            "18328b24.af6aa5"
+            "55f4812f.fa3b7"
          ]
       ]
    },
    {
-      "id":"18328b24.af6aa5",
+      "id":"55f4812f.fa3b7",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decicion notificacion",
       "property":"payload",
       "propertyType":"msg",
@@ -5551,7 +5551,7 @@
       "y":3140,
       "wires":[
          [
-            "3f583cff.925114"
+            "745a214a.ccdbc"
          ],
          [
             
@@ -5559,11 +5559,11 @@
       ]
    },
    {
-      "id":"59cdd687.f3a208",
+      "id":"ac61ae9d.7b151",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Notificaciones ? (habilitada o deshabilitada)",
-      "func":"msg.payload = global.get(\"NotificacionGlobal0\");\nreturn msg;\n",
+      "func":"msg.payload = global.get(\"NotificacionGlobal1\");\nreturn msg;\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -5575,14 +5575,14 @@
       "y":2060,
       "wires":[
          [
-            "932beda6.15f5e"
+            "8c0b5eeb.b0101"
          ]
       ]
    },
    {
-      "id":"932beda6.15f5e",
+      "id":"8c0b5eeb.b0101",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decicion notificacion",
       "property":"payload",
       "propertyType":"msg",
@@ -5601,7 +5601,7 @@
       "y":2060,
       "wires":[
          [
-            "6587d23d.edacdc"
+            "629cb46e.4b017c"
          ],
          [
             
@@ -5609,9 +5609,9 @@
       ]
    },
    {
-      "id":"50a59a0.d305768",
+      "id":"9c016579.3b08c8",
       "type":"delay",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "pauseType":"delay",
       "timeout":"10",
@@ -5627,17 +5627,17 @@
       "y":2220,
       "wires":[
          [
-            "43e024c9.630f4c",
-            "793f7ac1.455ca4",
-            "32a51636.59dbda",
-            "52ce9d0d.8deef4"
+            "5f7ae974.afe018",
+            "7c6c8dde.a727f4",
+            "d03f6025.bb1a2",
+            "36773eb8.41fde2"
          ]
       ]
    },
    {
-      "id":"62a429e9.a90958",
+      "id":"f10e3bc2.1702a8",
       "type":"debug",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "active":true,
       "tosidebar":true,
@@ -5653,9 +5653,9 @@
       ]
    },
    {
-      "id":"9af2f9fb.1e8188",
+      "id":"410b2258.c7898c",
       "type":"debug",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "active":true,
       "tosidebar":true,
@@ -5671,9 +5671,9 @@
       ]
    },
    {
-      "id":"2e638e96.6088c2",
+      "id":"58c8c5d2.423fec",
       "type":"switch",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Decicion correo tempertaura",
       "property":"payload",
       "propertyType":"msg",
@@ -5699,16 +5699,16 @@
             
          ],
          [
-            "3a699cd4.221b74"
+            "86eeaa24.529318"
          ]
       ]
    },
    {
-      "id":"da014ec9.d1161",
+      "id":"315ee252.08b36e",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Lectura de temperatura",
-      "func":"let array = global.get(\"alumnoGlobal0\");\nlet temperatura =  array.temperatura;\nmsg.payload = temperatura;\nreturn msg;",
+      "func":"let array = global.get(\"alumnoGlobal1\");\nlet temperatura =  array.temperatura;\nmsg.payload = temperatura;\nreturn msg;",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -5720,14 +5720,14 @@
       "y":1500,
       "wires":[
          [
-            "2e638e96.6088c2"
+            "58c8c5d2.423fec"
          ]
       ]
    },
    {
-      "id":"646512d3.4def9c",
+      "id":"ab91d384.63efb",
       "type":"telegram sender",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "bot":"b1e85f2c.05544",
       "haserroroutput":false,
@@ -5741,11 +5741,11 @@
       ]
    },
    {
-      "id":"a2506214.e1fe8",
+      "id":"15026920.852897",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Datos del mensaje",
-      "func":"let array = global.get(\"profesorGlobal0\");\nlet ubi = global.get(\"UbicacionGlobal0\");\nlet temperatura =  array.temperatura;\nlet nombre =  array.nombre;\nglobal.temp = temperatura;\n\nmsg.payload = {\n    \"chatId\": -628656105 , //Id de la persona\n    \"type\":\"message\" ,\n    \"content\" : \"Temperatura corporal Alta !!!, La temperatura corporal del usuario \" + nombre + \"es de : \" + temperatura +\" en \" + ubi\n}\n\nreturn msg;\n",
+      "func":"let array = global.get(\"profesorGlobal1\");\nlet ubi = global.get(\"UbicacionGlobal1\");\nlet temperatura =  array.temperatura;\nlet nombre =  array.nombre;\nglobal.temp = temperatura;\n\nmsg.payload = {\n    \"chatId\": -628656105 , //Id de la persona\n    \"type\":\"message\" ,\n    \"content\" : \"Temperatura corporal Alta !!!, La temperatura corporal del usuario \" + nombre + \"es de : \" + temperatura +\" en \" + ubi\n}\n\nreturn msg;\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -5757,14 +5757,14 @@
       "y":3120,
       "wires":[
          [
-            "66afe097.6e417"
+            "82004879.a55b08"
          ]
       ]
    },
    {
-      "id":"66afe097.6e417",
+      "id":"82004879.a55b08",
       "type":"telegram sender",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "bot":"b1e85f2c.05544",
       "haserroroutput":false,
@@ -5778,11 +5778,11 @@
       ]
    },
    {
-      "id":"3a699cd4.221b74",
+      "id":"86eeaa24.529318",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"Datos del mensaje",
-      "func":"let array = global.get(\"alumnoGlobal0\");\nlet ubi = global.get(\"UbicacionGlobal0\");\nlet temperatura =  array.temperatura;\nlet nombre =  array.nombre;\nglobal.temp = temperatura;\n\nmsg.payload = {\n    \"chatId\": -628656105 , //Id de la persona\n    \"type\":\"message\" ,\n    \"content\" : \"Temperatura coorporal Alta !!!, La temperatura corporal del usuario \" + nombre + \"es de :\" + temperatura +\" en \" + ubi\n}\n\nreturn msg;\n",
+      "func":"let array = global.get(\"alumnoGlobal1\");\nlet ubi = global.get(\"UbicacionGlobal1\");\nlet temperatura =  array.temperatura;\nlet nombre =  array.nombre;\nglobal.temp = temperatura;\n\nmsg.payload = {\n    \"chatId\": -628656105 , //Id de la persona\n    \"type\":\"message\" ,\n    \"content\" : \"Temperatura coorporal Alta !!!, La temperatura corporal del usuario \" + nombre + \"es de :\" + temperatura +\" en \" + ubi\n}\n\nreturn msg;\n",
       "outputs":1,
       "noerr":0,
       "initialize":"",
@@ -5794,14 +5794,14 @@
       "y":1500,
       "wires":[
          [
-            "646512d3.4def9c"
+            "ab91d384.63efb"
          ]
       ]
    },
    {
-      "id":"e970eb9b.bcffb8",
+      "id":"830f9b10.3fe668",
       "type":"debug",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "active":true,
       "tosidebar":true,
@@ -5817,9 +5817,9 @@
       ]
    },
    {
-      "id":"2cbab7d5.f84bd8",
+      "id":"3083446b.946bdc",
       "type":"function",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "func":"let estado = msg.payload ; \nif ( estado == \"abierto\"){\n    msg.payload = \"Puerta Abierta\" ;\n}else{\n    msg.payload = \"Puerta Cerrada\";\n}\nreturn msg;",
       "outputs":1,
@@ -5833,14 +5833,14 @@
       "y":3380,
       "wires":[
          [
-            "f1107f32.30093"
+            "3ef8b5bd.bda13a"
          ]
       ]
    },
    {
-      "id":"84d59821.7afa08",
+      "id":"498c96f.2406b68",
       "type":"debug",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "name":"",
       "active":true,
       "tosidebar":true,
@@ -5856,34 +5856,34 @@
       ]
    },
    {
-      "id":"5e53722.1ffdb8c",
+      "id":"d257473.70a17b8",
       "type":"mysql",
-      "z":"f7ff6536.244cc8",
+      "z":"fa10062b.bcdec8",
       "mydb":"6cf09c01.dd67a4",
       "name":"",
       "x":2840,
       "y":2780,
       "wires":[
          [
-            "259e762.d58ed8a"
+            "eb5ff37.8875a1"
          ]
       ]
    },
    {
-      "id":"92cab881.5485c8",
+      "id":"3d1dda04.d53f36",
       "type":"ui_group",
       "name":"Ultimo usuario accedido",
-      "tab":"14dd5443.51457c",
+      "tab":"94b26ceb.04691",
       "order":2,
       "disp":true,
       "width":"8",
       "collapse":false
    },
    {
-      "id":"829fea5b.a88bf8",
+      "id":"2c8bf412.27520c",
       "type":"ui_group",
-      "name":"Control -  Laboratorio de Sistemas Digitales",
-      "tab":"14dd5443.51457c",
+      "name":"Control -  Laboratorio de Diseño Logico",
+      "tab":"94b26ceb.04691",
       "order":1,
       "disp":true,
       "width":"6",
@@ -5962,31 +5962,31 @@
       "sessionExpiry":""
    },
    {
-      "id":"feeef7f9.470b08",
+      "id":"fc79d744.6ed698",
       "type":"ui_group",
       "name":"Ingresos",
-      "tab":"14dd5443.51457c",
+      "tab":"94b26ceb.04691",
       "order":4,
       "disp":true,
       "width":"10",
       "collapse":false
    },
    {
-      "id":"98104ae6.b93c88",
+      "id":"7581af59.f392c",
       "type":"ui_group",
       "name":"Salidas",
-      "tab":"14dd5443.51457c",
+      "tab":"94b26ceb.04691",
       "order":5,
       "disp":true,
       "width":"10",
       "collapse":false
    },
    {
-      "id":"fd3ea40d.6a26c8",
+      "id":"378ceaaa.0b7336",
       "type":"ui_group",
       "name":"Informacion del Profesor o Administrativo",
-      "tab":"14dd5443.51457c",
-      "order":6,
+      "tab":"94b26ceb.04691",
+      "order":7,
       "disp":true,
       "width":"6",
       "collapse":false
@@ -6016,11 +6016,11 @@
       "verboselogging":false
    },
    {
-      "id":"14dd5443.51457c",
+      "id":"94b26ceb.04691",
       "type":"ui_tab",
-      "name":" Laboratorio de Sistemas Digitales",
+      "name":"Laboratorio de Diseño Logico",
       "icon":"dashboard",
-      "order":9,
+      "order":4,
       "disabled":false,
       "hidden":false
    }
