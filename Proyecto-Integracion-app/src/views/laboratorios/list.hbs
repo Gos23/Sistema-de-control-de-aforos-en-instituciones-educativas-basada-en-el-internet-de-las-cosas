@@ -1,0 +1,43 @@
+ <!-- Aqui se codifica la vista de los Laboratorios y Aulas disponibles (Lista). -->
+
+<div class="container p-2 ">
+  <div class="row">
+    {{#each LabyAula}}
+      <div class="col-md-4 my-2 p-2">
+        <div class="card text-right bg-dark text-light">
+          <div class="card-body">
+            
+            <div class="text-center">
+              <h5 class="card-title text-uppercase"> {{nombre}} </h5>
+            </div>
+
+            <p class="m-2"> Aforo permitido : {{aforoPermitido}} </p>
+            <p class="m-2"> Aforo actual : {{aforoActual}} </p>
+            <p class="m-2"> Estado de la puerta : {{estadoPuerta}} </p>
+
+            <p class="m-2"> Lectura de temperatura : {{TrueoFalse LecturaTemperatura}} </p>
+            <p class="m-2"> Notificaciones : {{TrueoFalse notificaciones}} </p>
+            
+            <p class="m-2"> No Empleado : {{noEmpleado}} </p>
+            <p class="m-2"> Nombre : {{nombrePro}} </p>
+            
+            <div class="text-center">
+             <a class="btn btn-success text-center" href="/laboratorios/dash/{{id}}"  >Dashboard </a>
+             <a class="btn btn-warning text-center" href="/laboratorios/edit/{{id}}"> Editar </a>
+             <a class="btn btn-info text-center" href="/laboratorios/dashAlumnos/{{id}}"> Alumnos </a>
+             <a class="btn btn-primary text-center" href="/laboratorios/dashProfesores/{{id}}"> Profesores </a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    {{else}}
+      <div class="col-md-4 mx-auto">
+        <div class="card card-body text-center bg-dark text-light">
+          <p>Aun no hay laboratorios :( , agrega uno</p>
+          <a href="/laboratorios/add" class="text-success">Crear ahora!</a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

@@ -1,0 +1,218 @@
+ <!-- Aqui se codifica la vista de los Laboratorios y Aulas disponibles (Lista). -->
+
+<div class="container p-2 ">
+  <div class="row">
+    {{#each laboratorio}}
+      <div class="col-md-4 my-2 p-2">
+        <div class="card text-right bg-dark text-light">
+          <div class="card-body">
+  
+            <div class="text-center">
+              <h5 class="card-title text-uppercase"> {{nombre}} </h5>
+            </div>
+            
+            <div class="text-center">
+              <br>
+            </div>
+
+            <p class="m-2"> Aforo permitido : {{aforoPermitido}} </p>
+            <p class="m-2"> Aforo actual : {{aforoActual}} </p>
+            <p class="m-2"> Estado de la puerta : {{estadoPuerta}} </p>
+
+            <p class="m-2"> Lectura de temperatura : {{TrueoFalse LecturaTemperatura}} </p>
+            <p class="m-2"> Notificaciones : {{TrueoFalse notificaciones}} </p>
+            
+            <p class="m-2"> No Empleado : {{noEmpleado}} </p>
+            <p class="m-2"> Nombre : {{nombrePro}} </p>
+
+            <div class="text-center">
+              <br>
+            </div>
+            
+            <div class="text-center">
+            <a class="btn btn-success text-center" href="/laboratorios/dash/{{id}}"  > Dashboard </a>
+            </div>
+
+            <div class="text-center">
+              <br>
+              <br>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    {{/each}}
+
+    <div class="col-md-4 my-2 p-2">
+      <div class="card text-right bg-dark text-light">
+        <div class="card-body">
+
+          <canvas id="myChart" width="100" height="100" class="text-light"></canvas>
+          <script>
+          const ctx = document.getElementById('myChart');
+          const myChart = new Chart(ctx, {
+              type: 'bar',
+              data: {
+                  labels: [
+                  {{#each CincoDias}}
+                        '{{this}}',
+                  {{/each}}
+                  ],
+                 
+                  
+                  datasets: [{
+                      label: '# Temperaturas altas (Profesores y Personal) al dia',
+                      data: [
+                      {{#each dias}}
+                            {{this}},
+                      {{/each}}
+                      ],
+                      backgroundColor: [ 
+                          'rgba(255, 99, 132, 0.2)',
+                          'rgba(54, 162, 235, 0.2)',
+                          'rgba(255, 206, 86, 0.2)',
+                          'rgba(75, 192, 192, 0.2)',
+                          'rgba(153, 102, 255, 0.2)',
+                          'rgba(255, 159, 64, 0.2)'
+                      ],
+                      borderColor: [
+                          'rgba(255, 99, 132, 1)',
+                          'rgba(54, 162, 235, 1)',
+                          'rgba(255, 206, 86, 1)',
+                          'rgba(75, 192, 192, 1)',
+                          'rgba(153, 102, 255, 1)',
+                          'rgba(255, 159, 64, 1)'
+                      ],
+                      borderWidth: 1
+                  }]
+              },
+              options: {
+                  scales: {
+                      y: {
+                          beginAtZero: true
+                      }
+                  }
+              }
+          });
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 my-2 p-2">
+      <div class="card text-right bg-dark text-light">
+        <div class="card-body">
+
+          <canvas id="myChart1" width="100" height="100" class="text-light"></canvas>
+          <script>
+          const ctx1 = document.getElementById('myChart1');
+          const myChart1 = new Chart(ctx1, {
+              type: 'bar',
+              data: {
+                  labels: ["7:00 a 8:30","8:30 a 10:00","10:00 a 11:30","11:30 a 13:00","13:00 a 14:30","14:30 a 16:00","16:00 a 17:30","17:30 a 19:00","19:00 a 22:00"],
+                 
+                  
+                  datasets: [{
+                      label: '# Temperaturas altas (Profesores y Personal) al dia por hora',
+                      data: [
+                      {{#each horasCuantos}}
+                            {{this}},
+                      {{/each}}
+                      ],
+                      backgroundColor: [ 
+                          'rgba(255, 99, 132, 0.2)',
+                          'rgba(54, 162, 235, 0.2)',
+                          'rgba(255, 206, 86, 0.2)',
+                          'rgba(75, 192, 192, 0.2)',
+                          'rgba(153, 102, 255, 0.2)',
+                          'rgba(255, 159, 64, 0.2)'
+                      ],
+                      borderColor: [
+                          'rgba(255, 99, 132, 1)',
+                          'rgba(54, 162, 235, 1)',
+                          'rgba(255, 206, 86, 1)',
+                          'rgba(75, 192, 192, 1)',
+                          'rgba(153, 102, 255, 1)',
+                          'rgba(255, 159, 64, 1)'
+                      ],
+                      borderWidth: 1
+                  }]
+              },
+              options: {
+                  scales: {
+                      y: {
+                          beginAtZero: true
+                      }
+                  }
+              }
+          });
+          </script>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col-md-12 my-2 p-2">
+      <div class="card text-right bg-dark text-light">
+        <div class="card-body">
+                
+          <div class="text-center text-light">
+              <h5 class="card-title text-uppercase"> Buscar Profesores y Personal  </h5>
+              <p> Escribe para filtar por #clave, #huella, noEmpleado, etc ... </p> 
+          </div>
+
+          <!-- Buscar -->
+          <div class="form-floating mb-3 bg-dark">
+            <input class="form-control bg-dark text-light" id="buscador" type="text" name="nombre" placeholder=" buscar... ">
+            <label  for="buscador"> buscar... </label>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+      <div class="col-md-12 my-2 p-2">
+        <div class="card text-right bg-dark text-light">
+          <div class="card-body">
+              
+            <div class="text-center">
+              <h5 class="card-title text-uppercase"> Historial de Entradas (Temperaturas) </h5>
+            </div>
+
+            <!-- Tabla (Lista). -->
+            <h2>Profesores y Personal</h2>
+            <div class="table-responsive"></div>
+            <table class="table table-striped table-sm text-light">
+            <thead>
+              <tr>
+                <th scope="col">Clave</th>
+                <th scope="col">Huella</th>
+                <th scope="col">noEmpleado</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">°C</th>
+                <th scope="col">Fecha</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              {{#each datosEntrada}}
+              <tr>
+                <td class="text-light">{{clave}}</td>
+                <td class="text-light">{{huella}}</td>
+                <td class="text-light">{{noEmpleado}}</td>
+                <td class="text-light">{{nombre}}</td>
+                <td class="text-light">{{apellidos}}</td>
+                <td class="text-light">{{temperatura}}</td>
+                <td class="text-light">{{fecha}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+

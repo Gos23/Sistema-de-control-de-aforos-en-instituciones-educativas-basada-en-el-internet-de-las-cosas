@@ -1,0 +1,106 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ 
+  <div class="container">
+   <a class="navbar-brand" href="/laboratorios">
+      <img src="/img/icon.png" alt="" width="25" height="25" class="d-inline-block align-text-top">
+      GABANNI
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        {{#if user}}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Laboratorios y Aulas
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/laboratorios"> Laboratorios y Aulas</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/laboratorios/add"> Agregar Laboratorios/Aulas</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Alumnos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/alumnos"> Lista de alumnos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/alumnos/add"> Agregar alumno</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Profesores y Personal
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/profesores"> Lista de profesores y personal</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/profesores/add"> Agregar profesor/personal </a>
+            </div>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {{user.username}}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/profile">Perfil</a></li>
+              <li><a class="dropdown-item" href="/administradores/historial">Historial</a></li>
+              <li><a class="dropdown-item" href="/administradores">Lista Administradores</a></li>
+              <li><a class="dropdown-item" href="/signup">Registrar Administrador</a></li>
+              <li><a class="dropdown-item" href="/logout">Cerrar Sesión</a></li>
+             
+            </ul>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/signin">Iniciar sesión</a>
+          </li>
+          
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

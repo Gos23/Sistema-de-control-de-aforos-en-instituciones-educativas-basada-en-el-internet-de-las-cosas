@@ -1,0 +1,44 @@
+ <!-- Aqui se codifica la vista de los alumnos (Lista). -->
+<div class="container p-2 ">
+  <div class="row">
+
+    <!-- Buscar -->
+    <div class="col-md-6 mx-auto">
+      <div class="card text-center">
+        <div class="card-header">
+           <h2> Buscar administrador </h2>
+           <p> Escribe para filtar por username o nombre completo ... </p> 
+        </div>
+        <div class="card-body">
+          <div class="form-floating mb-3">
+            <input class="form-control" id="buscador" type="text" name="nombre" placeholder=" buscar... ">
+            <label for="buscador"> buscar... </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabla (Lista). -->
+    <h2>Alumnos</h2>
+    <div class="table-responsive"></div>
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th scope="col">Username</th>
+          <th scope="col">Nombre completo</th>        
+        </tr>
+      </thead>
+      <tbody id="myTable">
+        {{#each users}}
+        <tr>
+          <td>{{username}}</td>
+          <td>{{fullname}}</td>
+          <td><a class="btn btn-warning text-center" href="/administradores/edit/{{id}}"> Editar </a></td>
+          <td><a class="btn btn-danger" href="/administradores/delete/{{id}}"> Eliminar </a></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+   
+  </div>
+</div>

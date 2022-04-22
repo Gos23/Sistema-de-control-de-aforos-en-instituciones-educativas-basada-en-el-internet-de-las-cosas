@@ -1,0 +1,73 @@
+<div class="container p-4">
+  <div class="row">
+
+    <div class="col-md-4 mx-auto">
+      <div class="card text-center">
+        <div class="card-header">
+           <h3>Modificar Alumno</h3>
+        </div>
+        <div class="card-body">
+          <form action="/alumnos/edit/{{ alumno.id }}" method="POST">
+            
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingMatricula" name="matricula" placeholder="Matricula" value="{{alumno.matricula}}" autofocus>
+                <label for="floatingMatricula">Matricula</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingNombre" name="nombre" placeholder="Nombre" value="{{alumno.nombre}}">
+                <label for="floatingNombre">Nombre</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingApellidos" name="apellidos" placeholder="Apellidos" value="{{alumno.apellidos}}">
+                <label for="floatingApellidos">Apellidos</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select class="form-select" aria-label="Default select example" name="unidad" id="unidad" placeholder="Unidad" onchange="cargarDivision()">
+                  <option selected value="{{alumno.unidad}}"> {{alumno.unidad}} </option>
+                </select>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select class="form-select" aria-label="Default select example" name="division" id="division" placeholder="Division" onchange="cargarPlanEstudio()" >
+                  <option selected value="{{alumno.division}}" > {{alumno.division}} </option>
+                </select>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select class="form-select" aria-label="Default select example" name="planEstudio" id="planEstudio" placeholder="Plan de Estudio" >
+                  <option selected value="{{alumno.planEstudio}}" > {{alumno.planEstudio}} </option>
+                </select>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingEdad" name="edad" placeholder="Edad" value="{{alumno.edad}}">
+                <label for="floatingEdad">Edad</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingEmail" name="email" placeholder="Email" value="{{alumno.email}}">
+                <label for="floatingEmail">Email</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingTelefono" name="telefono" placeholder="Telefono" value="{{alumno.telefono}}">
+                <label for="floatingTelefono">Telefono</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingRFID" name="RFID" placeholder="RFID" value="{{alumno.RFID}}">
+                <label for="floatingRFID">RFID</label>
+            </div>
+
+            <button class="btn btn-warning btn-block">
+              Editar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

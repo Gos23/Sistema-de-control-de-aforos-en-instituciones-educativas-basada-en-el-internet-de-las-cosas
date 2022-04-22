@@ -1,0 +1,71 @@
+<div class="container p-4">
+  <div class="row">
+
+    <div class="col-md-4 mx-auto">
+      <div class="card text-center">
+        <div class="card-header">
+           <h3>Modificar Profesor/Personal</h3>
+        </div>
+        <div class="card-body">
+          <form action="/profesores/edit/{{ profesor.id }}" method="POST">
+            
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingNoEmpleado" name="noEmpleado" placeholder="No Empleadoa"  value="{{profesor.noEmpleado}}">
+                <label for="floatingNoEmpleado">No Empleado</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingNombre" name="nombre" placeholder="Nombre" value="{{profesor.nombre}}">
+                <label for="floatingNombre">Nombre</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingApellidos" name="apellidos" placeholder="Apellidos" value="{{profesor.apellidos}}">
+                <label for="floatingApellidos">Apellidos</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select class="form-select" aria-label="Default select example" name="unidad" id="unidad" placeholder="Unidad" onchange="cargarDivision()">
+                  <option selected value="{{profesor.unidad}}"> {{profesor.unidad}} </option>
+                </select>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select class="form-select" aria-label="Default select example" name="division" id="division" placeholder="Division"  >
+                  <option selected value="{{profesor.division}}" > {{profesor.division}} </option>
+                </select>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingEdad" name="edad" placeholder="Edad" value="{{profesor.edad}}">
+                <label for="floatingEdad">Edad</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingEmail" name="email" placeholder="Email" value="{{profesor.email}}">
+                <label for="floatingEmail">Email</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingTelefono" name="telefono" placeholder="Telefono" value="{{profesor.telefono}}">
+                <label for="floatingTelefono">Telefono</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingClave" name="clave" placeholder="Clave" value="{{profesor.clave}}">
+                <label for="floatingClave">Clave</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingHuella" name="huella" placeholder="Huella" value="{{profesor.huella}}">
+                <label for="floatingHuellav">Huella</label>
+            </div>
+
+            <button class="btn btn-warning btn-block">
+              Editar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

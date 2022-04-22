@@ -1,0 +1,59 @@
+ <!-- Aqui se codifica la vista de los alumnos (Lista). -->
+<div class="container p-2 ">
+  <div class="row">
+
+    <!-- Buscar -->
+    <div class="col-md-6 mx-auto">
+      <div class="card text-center">
+        <div class="card-header">
+           <h2> Buscar alumnos </h2>
+           <p> Escribe para filtar por matricula, nombre, apellido, etc ... </p> 
+        </div>
+        <div class="card-body">
+          <div class="form-floating mb-3">
+            <input class="form-control" id="buscador" type="text" name="nombre" placeholder=" buscar... ">
+            <label for="buscador"> buscar... </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabla (Lista). -->
+    <h2>Alumnos</h2>
+    <div class="table-responsive"></div>
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th scope="col">Matricula</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Unidad</th>
+          <th scope="col">Division</th>
+          <th scope="col">Plan de Estudio</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Email</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">RFID</th>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+        {{#each alumnos}}
+        <tr>
+          <td>{{matricula}}</td>
+          <td>{{nombre}}</td>
+          <td>{{apellidos}}</td>
+          <td>{{unidad}}</td>
+          <td>{{division}}</td>
+          <td>{{planEstudio}}</td>
+          <td>{{edad}}</td>
+          <td>{{email}}</td>
+          <td>{{telefono}}</td>
+          <td>{{RFID}}</td>
+          <td><a class="btn btn-warning text-center" href="/alumnos/edit/{{id}}"> Editar </a></td>
+          <td><a class="btn btn-danger" href="/alumnos/delete/{{id}}"> Eliminar </a></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

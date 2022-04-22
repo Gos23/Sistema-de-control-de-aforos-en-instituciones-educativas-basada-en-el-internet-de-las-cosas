@@ -1,0 +1,30 @@
+<div class="container p-4">
+  <div class="row">
+
+    <div class="col-md-4 mx-auto">
+      <div class="card text-center">
+        <div class="card-header">
+           <h3>Modificar Administrador</h3>
+        </div>
+        <div class="card-body">
+          <form action="/administradores/edit/{{ user.id }}" method="POST">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingFullname" name="fullname" placeholder="Nombre completo" value="{{user.fullname}}" autofocus>
+                <label for="floatingFullname">Nombre completo</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingUsername" name="username" placeholder="Nombre de usuario" value="{{user.username}}">
+                <label for="floatingUsername">Nombre de usuario</label>
+            </div>
+            
+
+            <button class="btn btn-warning btn-block">
+              Editar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

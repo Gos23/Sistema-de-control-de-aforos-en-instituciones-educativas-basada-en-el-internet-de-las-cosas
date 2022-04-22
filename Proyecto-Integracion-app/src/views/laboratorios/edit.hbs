@@ -1,0 +1,35 @@
+<div class="container p-4">
+  <div class="row">
+
+    <div class="col-md-4 mx-auto">
+      <div class="card text-center">
+        <div class="card-header">
+           <h3>Editar Laboratorio o Aula</h3>
+        </div>
+        <div class="card-body">
+          <form action="/laboratorios/edit/{{ laboratorio.id }}" method="POST">
+            
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingNombre" name="nombre" placeholder="Nombre del Laboratorio/Aula" value="{{ laboratorio.nombre }}" autofocus>
+                <label for="floatingNombre">Nombre del Laboratorio/Aula</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingUrl" name="url" placeholder="URL" value="{{ laboratorio.url }}" >
+                <label for="floatingUrl">URL</label>
+            </div>
+
+            <button class="btn btn-warning btn-block">
+              Editar
+            </button>
+
+            <a class="btn btn-danger" href="/laboratorios/delete/{{ laboratorio.id }}">
+              Eliminar
+            </a>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
