@@ -134,8 +134,12 @@ router.get('/dashAlumnos/:id', Logueado, async (req, res) => {
             CincoDias[i] = year + "-" + mesActual + "-" + CincoDias[i];
         }
     }
-
+    
     function DiasB() {
+        fecha = new Date();
+        hoy = fecha.getDate();
+        mesActual = fecha.getMonth() + 1; 
+        year = fecha.getFullYear();
         let temp = hoy;
         
         if((temp == 28 || temp == 29) && mesActual == 2 ){
@@ -177,7 +181,6 @@ router.get('/dashAlumnos/:id', Logueado, async (req, res) => {
             temp += 1 ;
             morning = temp;
         }
-    
         morning = year + "-" + mesActual + "-" + morning;
     }
     
@@ -207,6 +210,7 @@ router.get('/dashAlumnos/:id', Logueado, async (req, res) => {
         let cuantos = await db.query('SELECT COUNT(*) as total FROM registroentradaalumnoshistorial WHERE area = ? AND fecha >= ? AND fecha < ? ', [laboratorio[0].nombre,CincoDias[i],CincoDias[i-1]]);
         dias[i] = cuantos[0].total;
     }
+
     
     /////////////////////////////////////////
 
@@ -360,8 +364,11 @@ router.get('/dashProfesores/:id', Logueado, async (req, res) => {
     }
 
     function DiasB() {
+        fecha = new Date();
+        hoy = fecha.getDate();
+        mesActual = fecha.getMonth() + 1; 
+        year = fecha.getFullYear();
         let temp = hoy;
-        
         if((temp == 28 || temp == 29) && mesActual == 2 ){
             if(temp == 29){
                 temp = 1;
@@ -582,6 +589,10 @@ router.get('/TempAlumnos/:id', Logueado, async (req, res) => {
     }
 
     function DiasB() {
+        fecha = new Date();
+        hoy = fecha.getDate();
+        mesActual = fecha.getMonth() + 1; 
+        year = fecha.getFullYear();
         let temp = hoy;
         
         if((temp == 28 || temp == 29) && mesActual == 2 ){
@@ -803,6 +814,10 @@ router.get('/TempProfesores/:id', Logueado, async (req, res) => {
     }
 
     function DiasB() {
+        fecha = new Date();
+        hoy = fecha.getDate();
+        mesActual = fecha.getMonth() + 1; 
+        year = fecha.getFullYear();
         let temp = hoy;
         
         if((temp == 28 || temp == 29) && mesActual == 2 ){
